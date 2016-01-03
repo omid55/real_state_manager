@@ -1,0 +1,203 @@
+﻿<Window x:Class="NeginProject.Search.ApartmanEdariSAdvanced"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:NeginProject"
+    Title="فرم جستجوی پیشرفته آپارتمان اداری استیجاری"  WindowState="Maximized" Background="LightBlue" Height="762" Width="1021" KeyUp="Window_KeyUp">
+    <StackPanel>
+        <Grid Height="60">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="42*" />
+                <RowDefinition Height="38*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="209*" />
+                <ColumnDefinition Width="791*" />
+            </Grid.ColumnDefinitions>
+            <Rectangle Stroke="Black" StrokeThickness="1" Grid.ColumnSpan="2" Grid.RowSpan="2"></Rectangle>
+            <Label FlowDirection="RightToLeft" Content="فرم جستجوی پیشرفته آپارتمان اداری استیجاری" FontFamily="Tahoma" Foreground="#FF3956D3" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2" Grid.RowSpan="2"></Label>
+            <Label Content="تاریخ :" FontFamily="Tahoma" FlowDirection="RightToLeft" HorizontalAlignment="Right" Grid.Row="0" VerticalAlignment="Center"></Label>
+            <Label Content="شماره :" FontFamily="Tahoma" FlowDirection="RightToLeft" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Row="1"></Label>
+            <local:MyMaskedTextBox x:Name="MaskedDate" StayInFocusUntilValid="False"  Mask="0000/00/00" IgnoreSpace="True" Margin="76,9,67,3"></local:MyMaskedTextBox>
+            <TextBox FlowDirection="RightToLeft" FontFamily="Tahoma" Grid.Row="1" Margin="76.44,4,66.12,5" Name="ID_Txt" TextAlignment="Center" />
+        </Grid>
+        <Grid Height="100">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="101*" />
+                <ColumnDefinition Width="84*" />
+                <ColumnDefinition Width="96*" />
+                <ColumnDefinition Width="62*" />
+                <ColumnDefinition Width="97*" />
+                <ColumnDefinition Width="67*" />
+                <ColumnDefinition Width="94*" />
+                <ColumnDefinition Width="85*" />
+                <ColumnDefinition Width="94*" />
+                <ColumnDefinition Width="53*" />
+                <ColumnDefinition Width="95*" />
+                <ColumnDefinition Width="72*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50*" />
+                <RowDefinition Height="50*" />
+            </Grid.RowDefinitions>
+            <Rectangle Grid.ColumnSpan="12" Grid.RowSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stroke="Black" StrokeThickness="1"></Rectangle>
+            <Label Content="آدرس :" FontFamily="Tahoma" FlowDirection="RightToLeft" Grid.Column="11" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+            <Label FontFamily="Tahoma" HorizontalAlignment="Right" VerticalAlignment="Center" FlowDirection="RightToLeft" Content="متراژ مفید :" Grid.Column="11" Grid.Row="1"></Label>
+            <TextBox Name="textBox2" FontFamily="Tahoma" FlowDirection="RightToLeft" TextAlignment="Center" Grid.Row="1" Width="70" Margin="22,15.862,0,15.862" Grid.Column="10"></TextBox>
+            <Label Content="طبقه :" FlowDirection="RightToLeft" FontFamily="Tahoma" Grid.Row="1" VerticalAlignment="Center" Grid.Column="9" Height="23.277" Margin="12.537,0,0,0"></Label>
+            <TextBox Name="textBox3" FontFamily="Tahoma" FlowDirection="RightToLeft" Grid.Row="1" Margin="24,15.862,0,15.862" Grid.Column="8"></TextBox>
+            <Label Content="تعداد اتاق ها :" FontFamily="Tahoma" FlowDirection="RightToLeft" Grid.Row="1" VerticalAlignment="Center" Grid.Column="7" Height="23.277" Margin="9.41,0,0,0"></Label>
+            <TextBox Name="textBox4" FontFamily="Tahoma" FlowDirection="RightToLeft" TextAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Grid.Column="6" Height="19.277" Margin="24,0,0,0"></TextBox>
+            <Label FlowDirection="RightToLeft" FontFamily="Tahoma" Content="آبدارخانه :" Grid.Row="1" VerticalAlignment="Center" Grid.Column="5" Height="23.277" Margin="11.41,0,0,0"></Label>
+            <TextBox Name="textBox5" FontFamily="Tahoma" FlowDirection="RightToLeft" Grid.Row="1" VerticalAlignment="Center" Grid.Column="4" Height="19.277" Margin="27,0,0,0"></TextBox>
+            <Label Content="کفپوش :" FontFamily="Tahoma" FlowDirection="RightToLeft" Grid.Row="1" VerticalAlignment="Center" Grid.Column="3" Height="23.277" Margin="11.793,0,0,0"></Label>
+            <TextBox Name="textBox6" FontFamily="Tahoma" FlowDirection="RightToLeft" Grid.Row="1" VerticalAlignment="Center" Grid.Column="2" Height="19.277" Margin="26,0,0,0"></TextBox>
+            <Label Content="مدت ساخت :" FontFamily="Tahoma" FlowDirection="RightToLeft" Grid.Row="1" VerticalAlignment="Center" Grid.Column="1" Height="23.277" Margin="11.157,0,0,0"></Label>
+            <TextBox Name="textBox7" TextAlignment="Center" FontFamily="Tahoma" FlowDirection="RightToLeft" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Right" Width="70"></TextBox>
+            <TextBox Name="textBox1" FlowDirection="RightToLeft" FontFamily="Tahoma" Grid.ColumnSpan="11" Margin="61,15.362,0,15.362"></TextBox>
+        </Grid>
+        <Grid>
+            <Grid HorizontalAlignment="Right" Width="720">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="51*" />
+                    <RowDefinition Height="51*" />
+                    <RowDefinition Height="51*" />
+                    <RowDefinition Height="51*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="98.64*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="227*" />
+                    <ColumnDefinition Width="157*" />
+                    <ColumnDefinition Width="96*" />
+                    <ColumnDefinition Width="70*" />
+                    <ColumnDefinition Width="167*" />
+                </Grid.ColumnDefinitions>
+                <Rectangle Stroke="Black" StrokeThickness="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ColumnSpan="2" Grid.RowSpan="4"></Rectangle>
+                <Rectangle Stroke="Black" StrokeThickness="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="2" Grid.ColumnSpan="3" Grid.RowSpan="4"></Rectangle>
+                <Rectangle Stroke="Black" StrokeThickness="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="4" Grid.ColumnSpan="5" Grid.RowSpan="2"></Rectangle>
+                <Rectangle Stroke="Black" StrokeThickness="1" Grid.Row="6" Grid.ColumnSpan="5" Margin="0,0,0,48.75"></Rectangle>
+                <Label Content="تعداد طبقات :" FlowDirection="RightToLeft" FontFamily="Tahoma" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Column="4"></Label>
+                <TextBox TextAlignment="Center" Name="textBox8" FlowDirection="RightToLeft" FontFamily="Tahoma" VerticalAlignment="Center" HorizontalAlignment="Stretch" Grid.Column="3"></TextBox>
+                <Label Content="تعداد واحد ها :" FlowDirection="RightToLeft" FontFamily="Tahoma" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Row="1" Grid.Column="4"></Label>
+                <TextBox TextAlignment="Center" Name="textBox9" FlowDirection="RightToLeft" FontFamily="Tahoma" VerticalAlignment="Center" HorizontalAlignment="Stretch" Grid.Column="3" Grid.Row="1"></TextBox>
+                <Label Content="تعداد واحد در هر طبقه :" FlowDirection="RightToLeft" HorizontalAlignment="Right" Grid.Column="4" Margin="0,13.647,0,13.03" Grid.Row="2"></Label>
+                <TextBox TextAlignment="Center" Name="textBox10" FlowDirection="RightToLeft" FontFamily="Tahoma" VerticalAlignment="Center" HorizontalAlignment="Stretch" Grid.Column="3" Grid.Row="2"></TextBox>
+                <Label FlowDirection="RightToLeft" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Column="4" Grid.Row="3" Content="عرض معبر :"></Label>
+                <TextBox FlowDirection="RightToLeft" FontFamily="Tahoma" VerticalAlignment="Center" HorizontalAlignment="Stretch" Name="textBox12" Grid.Column="3" Grid.Row="3"/>
+                <Label Content="تاسیسات :" FlowDirection="RightToLeft" FontFamily="Tahoma" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"></Label>
+                <TextBox Name="textBox11" FlowDirection="RightToLeft" FontFamily="Tahoma" Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Right" Width="200"></TextBox>
+                <Label Content="نمای ساختمان :" FlowDirection="RightToLeft" FontFamily="Tahoma" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1"></Label>
+                <TextBox Name="textBox13" FlowDirection="RightToLeft" FontFamily="Tahoma" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Right" Width="200"></TextBox>
+                <Label Content="وضعیت تخلیه :" FlowDirection="RightToLeft" FontFamily="Tahoma" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" Grid.Row="2"></Label>
+                <TextBox Name="textBox14" FlowDirection="RightToLeft" FontFamily="Tahoma" Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Right" Width="200"></TextBox>
+                <Label Content="نوع کاربری سند :" FlowDirection="RightToLeft" FontFamily="Tahoma" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" Grid.Row="3" />
+                <TextBox Name="textBox15" FlowDirection="RightToLeft" FontFamily="Tahoma" Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Right" Width="200"></TextBox>
+                <Grid Grid.Row="4" Grid.ColumnSpan="5" Grid.RowSpan="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="49*" />
+                        <RowDefinition Height="50*" />
+                        <RowDefinition Height="50*" />
+                        <RowDefinition Height="48.338*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="384*" />
+                        <ColumnDefinition Width="116*" />
+                        <ColumnDefinition Width="156.057*" />
+                        <ColumnDefinition Width="63.943*" />
+                    </Grid.ColumnDefinitions>
+                    <Rectangle Stroke="Black" StrokeThickness="1" Grid.ColumnSpan="4" Grid.Row="3"></Rectangle>
+                    <Label Content="مورد مشابه برای اجاره در همین مجموعه :" FlowDirection="RightToLeft" FontFamily="Tahoma" Grid.Column="2" VerticalAlignment="Center" Grid.ColumnSpan="2" Height="23.277" Margin="11.457,0,0,0"></Label>
+                    <TextBox Name="textBox16" FlowDirection="RightToLeft" FontFamily="Tahoma" Grid.ColumnSpan="2" Margin="244,14.861,0,14.861"></TextBox>
+                    <Label FlowDirection="RightToLeft" FontFamily="Tahoma" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Column="2" Grid.Row="1" Content="ساعات کار مجموعه :" Grid.ColumnSpan="2" Height="23.277" Width="106.887"></Label>
+                    <TextBox FlowDirection="RightToLeft" FontFamily="Tahoma" Name="textBox17" Grid.Row="1" Grid.ColumnSpan="2" Margin="244,15.361,0,15.361" />
+                    <Label FlowDirection="RightToLeft" FontFamily="Tahoma" Content="مالک :" VerticalAlignment="Center" Grid.Column="3" Grid.Row="2" Height="23.277" HorizontalAlignment="Right"></Label>
+                    <TextBox FlowDirection="RightToLeft" FontFamily="Tahoma" Name="textBox18" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Right" Width="140"/>
+                    <Label Content="تلفنهای هماهنگی :" FlowDirection="RightToLeft" FontFamily="Tahoma" Grid.Row="2" VerticalAlignment="Center" Grid.Column="1" Height="23.277" HorizontalAlignment="Right"></Label>
+                    <TextBox Name="textBox19" FlowDirection="RightToLeft" FontFamily="Tahoma" Grid.Row="2" Margin="27.95,15.362,0,15.362"></TextBox>
+                    <Label Content="میزان رهن :" FlowDirection="RightToLeft" FontFamily="Tahoma" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Column="3" Grid.Row="3"></Label>
+                    <TextBox Name="textBox20" FontFamily="Tahoma" FlowDirection="LeftToRight" Grid.Column="2" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Right" Width="140" TextChanged="textBox20_TextChanged"></TextBox>
+                    <Label Content="میزان اجاره :" FlowDirection="RightToLeft" FontFamily="Tahoma" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Column="1" Grid.Row="3"></Label>
+                    <TextBox Name="textBox21" FontFamily="Tahoma" FlowDirection="LeftToRight" Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Right" Width="140" TextChanged="textBox21_TextChanged"></TextBox>
+                </Grid>
+
+            </Grid>
+            <Grid Height="400" HorizontalAlignment="Left" Width="280">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="54*" />
+                    <RowDefinition Height="38*" />
+                    <RowDefinition Height="308*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="116*" />
+                    <ColumnDefinition Width="24*" />
+                    <ColumnDefinition Width="116*" />
+                    <ColumnDefinition Width="24*" />
+                </Grid.ColumnDefinitions>
+                <Rectangle Stroke="Black" StrokeThickness="1" Grid.ColumnSpan="4"></Rectangle>
+                <Rectangle Stroke="Black" StrokeThickness="1" Grid.ColumnSpan="4" Grid.RowSpan="3"></Rectangle>
+                <Rectangle Stroke="Black" StrokeThickness="1" Grid.Column="2" Grid.RowSpan="3" Grid.ColumnSpan="2"></Rectangle>
+                <Label Grid.Column="2" Content="موقعیت" VerticalAlignment="Center" FontFamily="Tahoma" FlowDirection="RightToLeft" Height="23.277" Margin="47.757,0,23.757,0"></Label>
+                <Label Content="امکانات" VerticalAlignment="Center" FontFamily="Tahoma" FlowDirection="RightToLeft" Height="23.277" Margin="48.712,0,24.712,0"></Label>
+                <StackPanel Grid.Column="2" Grid.Row="2">
+                    <CheckBox Name="checkBox1" Content="شمالی" FontFamily="Tahoma" FlowDirection="RightToLeft" HorizontalAlignment="Right" VerticalAlignment="Top"></CheckBox>
+                    <CheckBox Name="checkBox2" Content="جنوبی" FontFamily="Tahoma" FlowDirection="RightToLeft" HorizontalAlignment="Right" VerticalAlignment="Top"></CheckBox>
+                    <CheckBox Name="checkBox3" Content="شرقی" FontFamily="Tahoma" FlowDirection="RightToLeft" HorizontalAlignment="Right" VerticalAlignment="Top"></CheckBox>
+                    <CheckBox Name="checkBox4" Content="غربی" FontFamily="Tahoma" FlowDirection="RightToLeft" HorizontalAlignment="Right" VerticalAlignment="Top"></CheckBox>
+                    <CheckBox Name="checkBox5" Content="بر خیابان" FontFamily="Tahoma" FlowDirection="RightToLeft" HorizontalAlignment="Right" VerticalAlignment="Top"></CheckBox>
+                    <CheckBox Name="checkBox6" Content="بر کوچه" FontFamily="Tahoma" FlowDirection="RightToLeft" HorizontalAlignment="Right" VerticalAlignment="Top"></CheckBox>
+                    <CheckBox Name="checkBox7" Content="در به ساخت" FontFamily="Tahoma" FlowDirection="RightToLeft" HorizontalAlignment="Right" VerticalAlignment="Top"></CheckBox>
+                    <CheckBox Name="checkBox8" Content="در به حیاط" FontFamily="Tahoma" FlowDirection="RightToLeft" HorizontalAlignment="Right" VerticalAlignment="Top"></CheckBox>
+                </StackPanel>
+                <StackPanel Grid.Row="2">
+                    <CheckBox Name="checkBox9" Content="پارکینگ" FontFamily="Tahoma" FlowDirection="RightToLeft" HorizontalAlignment="Right" VerticalAlignment="Top"></CheckBox>
+                    <CheckBox Name="checkBox10" Content="انباری" FontFamily="Tahoma" FlowDirection="RightToLeft" HorizontalAlignment="Right" VerticalAlignment="Top"></CheckBox>
+                    <CheckBox Name="checkBox11" Content="تراس" FontFamily="Tahoma" FlowDirection="RightToLeft" HorizontalAlignment="Right" VerticalAlignment="Top"></CheckBox>
+                    <CheckBox Name="checkBox12" Content="آسانسور" FontFamily="Tahoma" FlowDirection="RightToLeft" HorizontalAlignment="Right" VerticalAlignment="Top"></CheckBox>
+                    <CheckBox Name="checkBox13" Content="نگهبانی" FontFamily="Tahoma" FlowDirection="RightToLeft" HorizontalAlignment="Right" VerticalAlignment="Top"></CheckBox>
+                    <CheckBox Name="checkBox14" Content="سانترال" FontFamily="Tahoma" FlowDirection="RightToLeft" HorizontalAlignment="Right" VerticalAlignment="Top"></CheckBox>
+                    <CheckBox Name="checkBox15" Content="دزدگیر" FontFamily="Tahoma" FlowDirection="RightToLeft" HorizontalAlignment="Right" VerticalAlignment="Top"></CheckBox>
+                </StackPanel>
+            </Grid>
+        </Grid>
+        <Grid Height="100">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="203*" />
+                <ColumnDefinition Width="76*" />
+                <ColumnDefinition Width="344*" />
+                <ColumnDefinition Width="291*" />
+                <ColumnDefinition Width="86*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="48*" />
+                <RowDefinition Height="56*" />
+                <RowDefinition Height="36*" />
+            </Grid.RowDefinitions>
+            <Rectangle Stroke="Black" StrokeThickness="1" Grid.ColumnSpan="5"></Rectangle>
+            <Rectangle Stroke="Black" StrokeThickness="1" Grid.ColumnSpan="5" Grid.RowSpan="2" Grid.Row="1"></Rectangle>
+            <Label Content="شرایط تبدیل :" FlowDirection="RightToLeft" FontFamily="Tahoma" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+            <TextBox Name="textBox22" FlowDirection="RightToLeft" FontFamily="Tahoma" VerticalAlignment="Center" HorizontalAlignment="Stretch" Grid.Column="3"></TextBox>
+            <Label Content="نوع معرفی :" FlowDirection="RightToLeft" FontFamily="Tahoma" Grid.Column="1" VerticalAlignment="Center" Height="23.277" Margin="9.623,0,0,0"></Label>
+            <TextBox Name="textBox23" FlowDirection="RightToLeft" FontFamily="Tahoma" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Column="0" Width="150"></TextBox>
+            <Label Content="توضیحات :" FlowDirection="RightToLeft" FontFamily="Tahoma" Grid.Column="4" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Right" Height="23.277" Width="57.103"></Label>
+            <RichTextBox Name="richTextBox1" FontFamily="Tahoma" FlowDirection="RightToLeft" Grid.Column="2" Grid.Row="1" Height="51.714" Margin="28.95,8,0,6" Width="592.08" Grid.RowSpan="2" Grid.ColumnSpan="2"></RichTextBox>
+            <Label Content="امضا :" FlowDirection="RightToLeft" FontFamily="Tahoma" Grid.Row="1" Margin="0,6,25.724,11" HorizontalAlignment="Right" Width="37.276"></Label>
+        </Grid>
+        <Grid Height="70">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="500*" />
+                <ColumnDefinition Width="500*" />
+            </Grid.ColumnDefinitions>
+            <Rectangle Stroke="Black" StrokeThickness="1" Grid.ColumnSpan="2"></Rectangle>
+            <Button HorizontalAlignment="Left" Margin="28,15,0,22" Name="search_button" TabIndex="10" Width="136" Grid.Column="1" Click="search_button_Click">
+                 جستجو شود
+            </Button>
+            <Button HorizontalAlignment="Right" Margin="0,15,30,22" Name="back_button" TabIndex="11" Width="119" Click="back_button_Click">
+                 بازگشت
+            </Button>
+            <CheckBox Margin="197,24,152,28" Name="Show3D_checkBox" Grid.Column="1">نمایش به صورت سه بعدی</CheckBox>
+            <Image HorizontalAlignment="Right" Margin="0,4,108,20" Source="/NeginProject;component/Images/return.png" Width="46" />
+            <Image HorizontalAlignment="Left" Margin="28,5,0,21" Source="/NeginProject;component/Images/search.png" Width="45.2" Grid.Column="1" />
+        </Grid>
+    </StackPanel>
+</Window>

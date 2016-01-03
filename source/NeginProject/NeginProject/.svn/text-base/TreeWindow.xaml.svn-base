@@ -1,0 +1,82 @@
+﻿<custom:DockableContent x:Class="NeginProject.TreeWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:custom="clr-namespace:DockingLibrary;assembly=DockingLibrary"
+    Title="گزینه ها" Height="300" Width="300" Background="Transparent">
+    <Grid Background="Transparent">
+        <TreeView FlowDirection="RightToLeft" FontFamily="Tahoma" >
+            <TreeView.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0" />
+                    <GradientStop Color="#15FFFFFF" Offset="1" />
+                </LinearGradientBrush>
+            </TreeView.Background>
+            <TreeViewItem Header="جستجو" >
+                <TreeViewItem Header="استیجاری">
+                    <TreeViewItem Header="آپارتمان مسکونی" >
+                        <TreeViewItem Header="با شماره" Selected="SMSid" />
+                        <TreeViewItem Header="ساده" Selected="SMSsimple" />
+                        <TreeViewItem Header="پیشرفته" Selected="SMSadv" />
+                    </TreeViewItem>
+                    <TreeViewItem Header="آپارتمان اداری" >
+                        <TreeViewItem Header="با شماره" Selected="SESid" />
+                        <TreeViewItem Header="ساده" Selected="SESsimple" />
+                        <TreeViewItem Header="پیشرفته" Selected="SESadv" />
+                    </TreeViewItem>
+                    <TreeViewItem Header="مغازه" >
+                        <TreeViewItem Header="با شماره" Selected="SMGHSid" />
+                        <TreeViewItem Header="ساده" Selected="SMGHSsimple" />
+                        <TreeViewItem Header="پیشرفته" Selected="SMGHSadv" />
+                    </TreeViewItem>
+                    <TreeViewItem Header="منزل یا مجموعه" >
+                        <TreeViewItem Header="با شماره" Selected="SMANSid" />
+                        <TreeViewItem Header="ساده" Selected="SMANSsimple" />
+                        <TreeViewItem Header="پیشرفته" Selected="SMANSadv" />
+                    </TreeViewItem>
+                </TreeViewItem>
+                <TreeViewItem Header="فروشی">
+                    <TreeViewItem Header="آپارتمان مسکونی" >
+                        <TreeViewItem Header="با شماره" Selected="SMFid" />
+                        <TreeViewItem Header="ساده" Selected="SMFsimple" />
+                        <TreeViewItem Header="پیشرفته" Selected="SMFadv" />
+                    </TreeViewItem>
+                    <TreeViewItem Header="آپارتمان اداری" >
+                        <TreeViewItem Header="با شماره" Selected="SEFid" />
+                        <TreeViewItem Header="ساده" Selected="SEFsimple" />
+                        <TreeViewItem Header="پیشرفته" Selected="SEFadv" />
+                    </TreeViewItem>
+                    <TreeViewItem Header="مغازه" >
+                        <TreeViewItem Header="با شماره" Selected="SMGHFid" />
+                        <TreeViewItem Header="ساده" Selected="SMGHFsimple" />
+                        <TreeViewItem Header="پیشرفته" Selected="SMGHFadv" />
+                    </TreeViewItem>
+                    <TreeViewItem Header="منزل یا مجموعه" >
+                        <TreeViewItem Header="با شماره" Selected="SMANFid" />
+                        <TreeViewItem Header="ساده" Selected="SMANFsimple" />
+                        <TreeViewItem Header="پیشرفته" Selected="SMANFadv" />
+                    </TreeViewItem>
+                    <TreeViewItem Header="باغ و ویلا" >
+                        <TreeViewItem Header="با شماره" Selected="SBFid" />
+                        <TreeViewItem Header="ساده" Selected="SBFsimple" />
+                        <TreeViewItem Header="پیشرفته" Selected="SBFadv" />
+                    </TreeViewItem>
+                </TreeViewItem>
+            </TreeViewItem>
+            <TreeViewItem Header="ثبت" >
+                <TreeViewItem Header="استیجاری">
+                    <TreeViewItem Header="آپارتمان مسکونی" Selected="INMS" />
+                    <TreeViewItem Header="آپارتمان اداری" Selected="INES" />
+                    <TreeViewItem Header="مغازه" Selected="INMGHS" />
+                    <TreeViewItem Header="منزل یا مجموعه" Selected="INMANS" />
+                </TreeViewItem>
+                <TreeViewItem Header="فروشی">
+                    <TreeViewItem Header="آپارتمان مسکونی" Selected="INMF" />
+                    <TreeViewItem Header="آپارتمان اداری" Selected="INEF" />
+                    <TreeViewItem Header="مغازه" Selected="INMGHF" />
+                    <TreeViewItem Header="منزل یا مجموعه" Selected="INMANF" />
+                    <TreeViewItem Header="باغ و ویلا" Selected="INBF" />
+                </TreeViewItem>
+            </TreeViewItem>
+        </TreeView>
+    </Grid>
+</custom:DockableContent>

@@ -1,0 +1,27 @@
+﻿<Window x:Class="NeginProject.ManageUsers"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Background="LightBlue" FontSize="20"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontFamily="Tahoma"
+            xmlns:wfi="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
+    xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        Title="مدیریت کاربران" Height="410" Width="736" KeyUp="Window_KeyUp">
+    <Canvas>
+        <wfi:WindowsFormsHost FlowDirection="RightToLeft" FontSize="12" Name="dgv" Canvas.Left="12" Canvas.Top="110" Height="198" Width="690">
+            <wf:DataGridView AllowUserToOrderColumns="True" AllowUserToResizeColumns="True" AllowUserToResizeRows="True" x:Name="gridView" />
+        </wfi:WindowsFormsHost>
+        <Button Content="نمایش اعضا" Height="31" HorizontalAlignment="Left" Margin="198,271,0,0" Name="button1" VerticalAlignment="Top" Width="161" Canvas.Left="236" Canvas.Top="57" Click="button1_Click" />
+        <Button Content="بازگشت" HorizontalAlignment="Right" Margin="0,271,185,7" Name="button2" TabIndex="41" Width="127" Canvas.Left="132" Canvas.Top="59" Click="button2_Click" />
+        <Image HorizontalAlignment="Right" Margin="0,257,275,7" Name="image1" Source="/NeginProject;component/Images/return.png" Width="45" Canvas.Left="132" Canvas.Top="59" />
+        <Button HorizontalAlignment="Right" Margin="0,12,22,266" Name="button3" TabIndex="41" Width="71" Canvas.Left="631" Canvas.Top="31" Height="60" Click="button3_Click">
+            <Image Source="/NeginProject;component/Images/add_user.png"></Image>
+        </Button>
+        <Button Canvas.Left="12" Canvas.Top="61" Name="Edit_Button" TabIndex="41" Height="46" Width="54" Click="Edit_Button_Click">
+            <Image Name="image2" Stretch="Fill" Source="/NeginProject;component/Images/edit_profile.png" />
+        </Button>
+        <Image Canvas.Left="420" Canvas.Top="315" Name="image3" Source="/NeginProject;component/Images/users.png" Width="51" Height="45" />
+        <Label Canvas.Top="12" FlowDirection="RightToLeft" FontSize="25" Foreground="#FF3956D3" Content="مدیریت کاربران" Canvas.Left="268" />
+        <Button Canvas.Left="72" Canvas.Top="61" Height="46" Name="Verify_Button" TabIndex="41" Width="54" Click="Verify_Button_Click" Visibility="Hidden">
+            <Image Name="image4" Stretch="Fill" Source="/NeginProject;component/Images/apply.png" />
+        </Button>
+        <Label Name="WarningLabel" Canvas.Left="132" Canvas.Top="85" FontSize="10" Content=" لطفا پس از تغییرات و یا افزودن کاربران یک مرتبه برای حصول اطمینان در ذخیره بر روی سطر خالی زیر آنها کلیک کنید:" FlowDirection="RightToLeft" Height="31" Width="487" Visibility="Hidden" />
+    </Canvas>
+</Window>

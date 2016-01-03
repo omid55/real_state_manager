@@ -1,0 +1,25 @@
+﻿<Window x:Class="NeginProject.PhoneBook"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:wfi="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
+    xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+    Title="دفترچه تلفن" Height="459" Width="584" Background="LightBlue" FontFamily="Tahoma" FontSize="20" KeyUp="Window_KeyUp">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="340*" />
+            <ColumnDefinition Width="195*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="58*" />
+            <RowDefinition Height="6*" />
+            <RowDefinition Height="68.57*" />
+            <RowDefinition Height="288.43*" />
+        </Grid.RowDefinitions>
+        <Label FontSize="25" Content="فرم دفترچه تلفن" Foreground="#FF3956D3" VerticalAlignment="Center" Grid.ColumnSpan="2" Height="40.177" HorizontalAlignment="Center"></Label>
+        <Label FlowDirection="RightToLeft" Grid.Row="2" Content="نام یا نام خانودگی :" Grid.Column="1" Margin="15,17.215,19,17.215"></Label>
+        <TextBox FlowDirection="RightToLeft" Name="name_TextBox" Grid.Row="2" TextChanged="name_TextBox_TextChanged" Grid.ColumnSpan="2" Margin="115,20,201,18"></TextBox>
+        <wfi:WindowsFormsHost FontSize="12" FlowDirection="RightToLeft" Grid.Row="3" Grid.ColumnSpan="2" Margin="12,0,12,12">
+            <wf:DataGridView AutoSizeColumnsMode="AllCells" AutoSizeRowsMode="AllCells" AutoSize="True" AllowUserToOrderColumns="True" AllowUserToAddRows="False" AllowUserToResizeColumns="True" AllowUserToResizeRows="True" x:Name="gridView" />
+        </wfi:WindowsFormsHost>
+    </Grid>
+</Window>

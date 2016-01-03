@@ -1,0 +1,26 @@
+﻿<Window x:Class="NeginProject.Login"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="ورود امنیتی" Height="299" Width="411" FontFamily="Tahoma" FontSize="20" KeyUp="Window_KeyUp" WindowStartupLocation="CenterScreen" Background="LightBlue">
+    <Grid Name="mainGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="211*" />
+            <ColumnDefinition Width="133*" />
+            <ColumnDefinition Width="45*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="83*" />
+            <RowDefinition Height="33*" />
+            <RowDefinition Height="45*" />
+            <RowDefinition Height="66*" />
+            <RowDefinition Height="34*" />
+        </Grid.RowDefinitions>
+        <Label FlowDirection="RightToLeft" FontFamily="Tahoma" FontSize="25" Foreground="MediumBlue" Margin="60,12,11,23" Name="label1" Grid.ColumnSpan="2">نرم افزار جامع املاک نگین</Label>
+        <Label FlowDirection="RightToLeft" FontFamily="Tahoma" Content="شناسه ورود :" Grid.Row="1" VerticalAlignment="Center" Grid.Column="1" HorizontalAlignment="Right"></Label>
+        <TextBox FlowDirection="RightToLeft" Name="username" FontFamily="Tahoma" Grid.Column="0" VerticalAlignment="Center" Grid.Row="1" HorizontalAlignment="Right" Width="150"></TextBox>
+        <Label FlowDirection="RightToLeft" FontFamily="Tahoma" Content="رمز ورود :" Grid.Row="2" VerticalAlignment="Center" Grid.Column="1" HorizontalAlignment="Right"></Label>
+        <PasswordBox FlowDirection="RightToLeft" Name="password" FontFamily="Tahoma" Grid.Column="0" VerticalAlignment="Center" Grid.Row="2" HorizontalAlignment="Right" Width="150"></PasswordBox>
+        <Button Content="وارد شوید" FlowDirection="RightToLeft" FontFamily="Tahoma" Grid.Row="3" Margin="0,29,11,0" Grid.ColumnSpan="2" HorizontalAlignment="Right" Width="136" Name="loginButton" Click="loginButton_Click"> </Button>
+        <Button Content="خروج" FlowDirection="RightToLeft" FontFamily="Tahoma" Margin="88,29,34,0" Grid.Row="3" Name="exitButton" Click="exitButton_Click"></Button>
+    </Grid>
+</Window>

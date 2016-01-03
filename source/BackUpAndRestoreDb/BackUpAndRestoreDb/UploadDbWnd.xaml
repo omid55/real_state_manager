@@ -1,0 +1,31 @@
+﻿<Window x:Class="BackUpAndRestoreDb.UploadDbWnd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Loaded="Window_Loaded"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontFamily="Tahoma" Background="LightBlue"
+        Title="صفحه ی ارسال اطلاعات پایگاه داده ها بر روی وب سایت" Height="512" Width="462">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="229*" />
+            <RowDefinition Height="162*" />
+        </Grid.RowDefinitions>
+        <Button Content="ارسال اطلاعات" Height="33" HorizontalAlignment="Left" Margin="263,0,0,12" Name="UploadButton" VerticalAlignment="Bottom" Width="168" Click="UploadButton_Click" Grid.Row="1" />
+        <Button Content="بازگست" Height="33" HorizontalAlignment="Left" Margin="18,0,0,12" Name="BackButton" VerticalAlignment="Bottom" Width="92" Click="BackButton_Click" Grid.Row="1" />
+        <ProgressBar Height="47" HorizontalAlignment="Left" Margin="5,0,0,97" Name="progressBar1" VerticalAlignment="Bottom" Width="426" Grid.Row="1" />
+        <Button Content="توقف و بستن برنامه" Height="33" HorizontalAlignment="Left" Margin="125,0,0,12" Name="ExitButton" VerticalAlignment="Bottom" Width="121" Grid.Row="1" Click="ExitButton_Click" />
+        <CheckBox FlowDirection="RightToLeft" Content="همراه با ایجاد پایگاه داده ها (برای اغلب سرورها لطفا این گزینه را تیک نزده بگذارید)" Height="16" HorizontalAlignment="Left" Margin="0,0,0,67" Name="createDbCheckBox" VerticalAlignment="Bottom" Checked="createDbCheckBox_Checked" Grid.Row="1" Width="433" />
+        <TextBox Height="29" HorizontalAlignment="Left" Margin="15,92,0,0" Name="ServerTextBox" VerticalAlignment="Top" Width="222" Grid.RowSpan="2" />
+        <ComboBox Height="29" HorizontalAlignment="Left" Margin="15,124,0,0" Name="DatabaseComboBox" VerticalAlignment="Top" Width="222" Grid.RowSpan="2" IsEditable="True" GotFocus="DatabaseComboBox_GotFocus" />
+        <Label Content="ارسال اطلاعات پایگاه داده ها بر روی وب سایت" FontSize="17" Foreground="DarkBlue" Height="35" Margin="48,12,49,0" Name="label3" VerticalAlignment="Top" />
+        <Label Content="آدرس سرور وب سایت :" FlowDirection="RightToLeft" Height="26" HorizontalAlignment="Left" Margin="287,95,0,0" Name="label1" VerticalAlignment="Top" Width="144" Grid.RowSpan="2" />
+        <Label Content="نام پایگاه داده های روی سرور :" FlowDirection="RightToLeft" Height="26" HorizontalAlignment="Left" Margin="257,124,0,0" Name="label2" VerticalAlignment="Top" Width="174" Grid.RowSpan="2" />
+        <TextBox Height="29" HorizontalAlignment="Left" Margin="15,167,0,0" Name="UserNameTextBox" VerticalAlignment="Top" Width="222" />
+        <Label Content="نام کاربری پایگاه داده های سرور :" FlowDirection="RightToLeft" Height="26" HorizontalAlignment="Left" Margin="245,167,0,0" Name="label4" VerticalAlignment="Top" Width="186" />
+        <PasswordBox Height="29" HorizontalAlignment="Left" Margin="15,200,0,0" Name="PasswordTextBox" VerticalAlignment="Top" Width="222" />
+        <Label Content="رمز ورود پایگاه داده های سرور :" FlowDirection="RightToLeft" Height="26" HorizontalAlignment="Left" Margin="245,199,0,0" Name="label5" VerticalAlignment="Top" Width="186" />
+        <RadioButton Checked="ClientModeRadio_Checked" FlowDirection="RightToLeft" Content="در کنار برنامه" Height="22" HorizontalAlignment="Left" Margin="303,51,0,0" Name="ClientModeRadio" VerticalAlignment="Top" Width="122" GroupName="DatabaseStatusRadios" IsChecked="True" />
+        <RadioButton Content="بر روی سرور" FlowDirection="RightToLeft" Height="22" HorizontalAlignment="Left" Margin="303,68,0,0" Name="ServerModeRadio" VerticalAlignment="Top" Width="122" GroupName="DatabaseStatusRadios" Checked="ServerModeRadio_Checked" />
+        <TextBox Height="29" HorizontalAlignment="Left" Margin="15,245,0,0" Name="SourceServerTextBox" VerticalAlignment="Top" Width="222" Visibility="Hidden" />
+        <ComboBox Height="29" HorizontalAlignment="Left" Margin="15,0,0,0" Name="SourceDbComboBox" VerticalAlignment="Top" Width="222" Grid.Row="1" Visibility="Hidden" IsEditable="True" GotFocus="SourceDbComboBox_GotFocus" />
+        <Label Content="آدرس سرور منبع :" FlowDirection="RightToLeft" Height="26" HorizontalAlignment="Left" Margin="281,248,0,0" Name="SourceServerLabel" VerticalAlignment="Top" Width="144" Visibility="Hidden" />
+        <Label Content="نام پایگاه روی سرور منبع :" FlowDirection="RightToLeft" Height="26" HorizontalAlignment="Left" Margin="251,0,0,0" Name="SourceDbLabel" VerticalAlignment="Top" Width="174" Grid.Row="1" Visibility="Hidden" />
+    </Grid>
+</Window>

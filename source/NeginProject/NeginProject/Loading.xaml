@@ -1,0 +1,14 @@
+﻿<Window x:Class="NeginProject.Loading"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:control="clr-namespace:NeginProject.Control" WindowStartupLocation="CenterScreen"
+    Title="لطفا کمی منتظر بمانید" Height="342" Width="408" Loaded="Window_Loaded" WindowStyle="SingleBorderWindow" ResizeMode="NoResize">
+    <Grid>
+        <Image Margin="65,58,59,80" Name="image1" Stretch="Fill" Source="/NeginProject;component/Images/logo.jpg" Visibility="Hidden" />
+        <control:LoadingAnimation Margin="139,102,145,107" x:Name="myprogress" />
+        <Label FontSize="15" FontFamily="Tahoma" Foreground="MediumBlue" FlowDirection="RightToLeft" Content="نرم افزار جامع املاک نگین" Height="28" Margin="106,12,109,0" Name="label1" VerticalAlignment="Top"></Label>
+        <Label FlowDirection="RightToLeft" FontFamily="Tahoma" FontSize="9" Foreground="MediumBlue" Height="21" Margin="65,0,76,12" Name="expireStr" VerticalAlignment="Bottom" Content="روز دیگر می توانید به صورت آزمایشی از برنامه استفاده نمایید ."></Label>
+        <Label FlowDirection="RightToLeft" FontFamily="Tahoma" FontSize="14" Foreground="DarkViolet" Height="31" Margin="0,0,44,6" Name="expireLbl" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="32" Content="0"></Label>
+        <Button IsEnabledChanged="Open_IsEnabledChanged" Margin="131,0,134,39" Name="Open" Height="35" VerticalAlignment="Bottom" Visibility="Hidden" Click="Open_Click" IsEnabled="False" Content="به برنامه وارد شوید"></Button>
+    </Grid>
+</Window>

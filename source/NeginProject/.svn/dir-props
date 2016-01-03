@@ -1,0 +1,13 @@
+K 10
+svn:ignore
+V 66
+*.suo
+*.ncb
+*.sdf
+*.opensdf
+ipch
+*.user
+_ReSharper.*
+NeginProject
+
+END

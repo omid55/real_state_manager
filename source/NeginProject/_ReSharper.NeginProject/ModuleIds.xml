@@ -1,0 +1,4 @@
+<Modules>
+  <Module PersistentId="BD5EE14F-C32C-42BD-BF24-117EFA7A7F62" ModuleId="NeginProject" />
+  <Module PersistentId="69E2809C-C227-489B-8D33-33E63E2C0074" ModuleId="BackUpAndRestoreDb" />
+</Modules>

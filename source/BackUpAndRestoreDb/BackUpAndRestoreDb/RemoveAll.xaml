@@ -1,0 +1,14 @@
+﻿<Window x:Class="BackUpAndRestoreDb.RemoveAll"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Loaded="Window_Loaded"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontFamily="Tahoma" Background="LightBlue"
+    Title="حذف همه ی اطلاعات داخل پایگاه داده ها" Height="252" Width="326" KeyUp="Window_KeyUp">
+    <Grid>
+        <Label  Content="آیا مطمئن هستید که می خواهید همه ی اطلاعات داخل " FlowDirection="RightToLeft" Height="29" Margin="0,50,12,0" Name="label1" VerticalAlignment="Top"></Label>
+        <Label  FlowDirection="RightToLeft" Content="پایگاه داده ها را حذف کنید ؟ (غیر قابل بازگشت هستند)" Margin="0,70,12,0" Height="33" VerticalAlignment="Top"></Label>
+        <Label FlowDirection="RightToLeft"  Margin="12,0,12,78" Name="label2" Height="27" VerticalAlignment="Bottom">اگر مطمئن هستید در زیر کلمه ی 'بلی' را وارد بفرمایید :</Label>
+        <TextBox  FlowDirection="RightToLeft" TextAlignment="Center" Height="24" Margin="109,0,113,46" Name="textBox1" VerticalAlignment="Bottom" />
+        <Label  FontSize="17" Foreground="DarkBlue" Height="35" Margin="68,9,67,0" Name="label3" VerticalAlignment="Top">حذف همه ی اطلاعات</Label>
+        <Button  Height="28" Margin="0,0,59,6" Name="button1" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="76" Click="button1_Click">تائید</Button>
+        <Button  Height="28" Margin="55,0,0,6" Name="button2" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="76" Click="button2_Click">بازگشت</Button>
+    </Grid>
+</Window>

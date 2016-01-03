@@ -1,0 +1,43 @@
+C:\Documents and Settings\omid\My Documents\Visual Studio 2008\Projects\BackUpAndRestoreDb\BackUpAndRestoreDb\bin\Release\BackUpAndRestoreDb.exe
+C:\Documents and Settings\omid\My Documents\Visual Studio 2008\Projects\BackUpAndRestoreDb\BackUpAndRestoreDb\bin\Release\BackUpAndRestoreDb.pdb
+C:\Documents and Settings\omid\My Documents\Visual Studio 2008\Projects\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\omid\My Documents\Visual Studio 2008\Projects\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Release\RemoveAll.baml
+C:\Documents and Settings\omid\My Documents\Visual Studio 2008\Projects\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Release\Window1.baml
+C:\Documents and Settings\omid\My Documents\Visual Studio 2008\Projects\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Release\RemoveAll.g.cs
+C:\Documents and Settings\omid\My Documents\Visual Studio 2008\Projects\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Release\Window1.g.cs
+C:\Documents and Settings\omid\My Documents\Visual Studio 2008\Projects\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Release\App.g.cs
+C:\Documents and Settings\omid\My Documents\Visual Studio 2008\Projects\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Release\BackUpAndRestoreDb_MarkupCompile.cache
+C:\Documents and Settings\omid\My Documents\Visual Studio 2008\Projects\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Release\BackUpAndRestoreDb.g.resources
+C:\Documents and Settings\omid\My Documents\Visual Studio 2008\Projects\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Release\BackUpAndRestoreDb.Properties.Resources.resources
+C:\Documents and Settings\omid\My Documents\Visual Studio 2008\Projects\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Release\BackUpAndRestoreDb.csproj.GenerateResource.Cache
+C:\Documents and Settings\omid\My Documents\Visual Studio 2008\Projects\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Release\BackUpAndRestoreDb.exe
+C:\Documents and Settings\omid\My Documents\Visual Studio 2008\Projects\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Release\BackUpAndRestoreDb.pdb
+C:\NeginProjectWin7\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Release\BackUpAndRestoreDb.exe
+C:\NeginProjectWin7\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Release\BackUpAndRestoreDb.pdb
+C:\NeginProjectWin7\BackUpAndRestoreDb\BackUpAndRestoreDb\bin\Release\BackUpAndRestoreDb.exe
+C:\NeginProjectWin7\BackUpAndRestoreDb\BackUpAndRestoreDb\bin\Release\BackUpAndRestoreDb.pdb
+C:\NeginProjectWin7\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Release\ResolveAssemblyReference.cache
+C:\NeginProjectWin7\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Release\RemoveAll.baml
+C:\NeginProjectWin7\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Release\Window1.baml
+C:\NeginProjectWin7\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Release\RemoveAll.g.cs
+C:\NeginProjectWin7\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Release\Window1.g.cs
+C:\NeginProjectWin7\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Release\App.g.cs
+C:\NeginProjectWin7\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Release\BackUpAndRestoreDb_MarkupCompile.cache
+C:\NeginProjectWin7\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Release\BackUpAndRestoreDb.g.resources
+C:\NeginProjectWin7\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Release\BackUpAndRestoreDb.Properties.Resources.resources
+C:\NeginProjectWin7\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Release\BackUpAndRestoreDb.csproj.GenerateResource.Cache
+C:\MyPlace\MyProgrammingPlace\Programming\Programs with C#\Projects\NeginProject(amlaak)\LATEST\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Release\BackUpAndRestoreDb.exe
+C:\MyPlace\MyProgrammingPlace\Programming\Programs with C#\Projects\NeginProject(amlaak)\LATEST\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Release\BackUpAndRestoreDb.pdb
+C:\MyPlace\MyProgrammingPlace\Programming\Programs with C#\Projects\NeginProject(amlaak)\LATEST\BackUpAndRestoreDb\BackUpAndRestoreDb\bin\Release\BackUpAndRestoreDb.exe
+C:\MyPlace\MyProgrammingPlace\Programming\Programs with C#\Projects\NeginProject(amlaak)\LATEST\BackUpAndRestoreDb\BackUpAndRestoreDb\bin\Release\BackUpAndRestoreDb.pdb
+C:\MyPlace\MyProgrammingPlace\Programming\Programs with C#\Projects\NeginProject(amlaak)\LATEST\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Release\ResolveAssemblyReference.cache
+C:\MyPlace\MyProgrammingPlace\Programming\Programs with C#\Projects\NeginProject(amlaak)\LATEST\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Release\RemoveAll.baml
+C:\MyPlace\MyProgrammingPlace\Programming\Programs with C#\Projects\NeginProject(amlaak)\LATEST\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Release\Window1.baml
+C:\MyPlace\MyProgrammingPlace\Programming\Programs with C#\Projects\NeginProject(amlaak)\LATEST\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Release\RemoveAll.g.cs
+C:\MyPlace\MyProgrammingPlace\Programming\Programs with C#\Projects\NeginProject(amlaak)\LATEST\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Release\Window1.g.cs
+C:\MyPlace\MyProgrammingPlace\Programming\Programs with C#\Projects\NeginProject(amlaak)\LATEST\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Release\App.g.cs
+C:\MyPlace\MyProgrammingPlace\Programming\Programs with C#\Projects\NeginProject(amlaak)\LATEST\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Release\BackUpAndRestoreDb_MarkupCompile.cache
+C:\MyPlace\MyProgrammingPlace\Programming\Programs with C#\Projects\NeginProject(amlaak)\LATEST\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Release\BackUpAndRestoreDb.g.resources
+C:\MyPlace\MyProgrammingPlace\Programming\Programs with C#\Projects\NeginProject(amlaak)\LATEST\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Release\BackUpAndRestoreDb.Properties.Resources.resources
+C:\MyPlace\MyProgrammingPlace\Programming\Programs with C#\Projects\NeginProject(amlaak)\LATEST\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Release\ResGen.read.1.tlog
+C:\MyPlace\MyProgrammingPlace\Programming\Programs with C#\Projects\NeginProject(amlaak)\LATEST\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Release\ResGen.write.1.tlog

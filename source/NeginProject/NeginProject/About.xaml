@@ -1,0 +1,21 @@
+﻿<Window x:Class="NeginProject.About" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontFamily="Tahoma" Background="LightBlue" Title="درباره ی ما" Height="421" Width="357" Loaded="Window_Loaded" KeyUp="Window_KeyUp">
+	<Grid>
+		<Button Content="بازگشت" FlowDirection="RightToLeft" Height="27" Margin="105,0,114,12" Name="button1" VerticalAlignment="Bottom" Click="button1_Click" />
+		<Label Content="و یا با آدرس پست الکترونیکی ذیل مکاتبه بفرمایید :" FlowDirection="RightToLeft" FontSize="10" Foreground="MediumBlue" Height="30" Margin="96,230,12,0" Name="label7" VerticalAlignment="Top" />
+		<Label Content="امید عسکری" FlowDirection="RightToLeft" FontSize="10" Foreground="DarkViolet" Height="25" HorizontalAlignment="Right" Margin="0,112,94,0" Name="label8" VerticalAlignment="Top" Width="80" />
+		<Label Content="omid55@paarmis.com" FlowDirection="RightToLeft" FontSize="10" Foreground="DarkViolet" Height="25" Margin="109,275,119,0" Name="label10" VerticalAlignment="Top" />
+		<Label Content="09133260911" FlowDirection="RightToLeft" FontSize="10" Foreground="DarkViolet" Height="25" HorizontalAlignment="Left" Margin="69,112,0,0" Name="label11" VerticalAlignment="Top" Width="70" />
+		<Label FontSize="20" Foreground="MediumBlue" FlowDirection="RightToLeft" Content="نرم افزار جامع مدیریت املاک نگين" Height="41" HorizontalAlignment="Left" Margin="30,12,0,0" Name="label1" VerticalAlignment="Top" Width="301" />
+		<Label Content="به سفارش شرکت داده گستر پارمیس" FlowDirection="RightToLeft" FontSize="15" Foreground="MediumBlue" Height="30" Margin="69,43,12,0" Name="label2" VerticalAlignment="Top" />
+		<Label Content="ورژن 1.3.2.2" FlowDirection="RightToLeft" FontSize="10" Foreground="MediumBlue" Height="30" Margin="0,0,273,0" Name="label3" VerticalAlignment="Top" />
+		<Image Height="60" HorizontalAlignment="Left" Margin="18,43,0,0" Name="image2" Source="/NeginProject;component/Images/icon.png" Stretch="Fill" VerticalAlignment="Top" Width="63.667" />
+		<Label Content="شماره سریال محصول برای شما :" FlowDirection="RightToLeft" FontSize="10" Foreground="MediumBlue" Height="30" Margin="165,305,18,0" Name="label4" VerticalAlignment="Top" />
+		<TextBox TextAlignment="Center" IsReadOnly="True" Height="27" HorizontalAlignment="Left" Margin="43,306,0,0" Name="Serial_Txt" VerticalAlignment="Top" Width="116" />
+		<Label Content="mail@paarmis.com" FlowDirection="RightToLeft" FontSize="10" Foreground="DarkViolet" Height="25" Margin="114,254,127,0" Name="label5" VerticalAlignment="Top" />
+		<Label Content="طراح و برنامه نویس :" FlowDirection="RightToLeft" FontSize="10" Foreground="MediumBlue" Height="25" Margin="232,112,0,0" Name="label6" VerticalAlignment="Top" />
+		<Label Content="تلفن تماس :" FlowDirection="RightToLeft" FontSize="10" Foreground="DarkViolet" Height="25.07" HorizontalAlignment="Right" Margin="0,187,35,0" Name="label9" VerticalAlignment="Top" Width="80" />
+		<Label Content="03116263665" FlowDirection="RightToLeft" FontSize="10" Foreground="DarkViolet" Height="25.07" HorizontalAlignment="Left" Margin="96,179,0,0" Name="label12" VerticalAlignment="Top" Width="80" />
+		<Label Content="جهت سفارش نرم افزار یا درخواست پشتیبانی با ما تماس بگیرید :" FlowDirection="RightToLeft" FontSize="10" Foreground="MediumBlue" Height="30" Margin="43,143,0,0" Name="label13" VerticalAlignment="Top" />
+		<Label Content="03116263661" FlowDirection="RightToLeft" FontSize="10" Foreground="DarkViolet" Height="25.07" HorizontalAlignment="Left" Margin="96,199,0,0" Name="label14" VerticalAlignment="Top" Width="80" />
+	</Grid>
+</Window>

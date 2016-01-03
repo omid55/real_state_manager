@@ -1,0 +1,14 @@
+﻿<Window x:Class="BackUpAndRestoreDb.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Closing="Window_Closing" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontFamily="Tahoma" Background="LightBlue"
+    Title="برنامه ی پشتیبانی و مدیریت" Height="480" Width="345" KeyUp="Window_KeyUp">
+    <Grid>
+        <Button  Margin="12,0,20,160" Name="button1" Click="button1_Click" Height="31" VerticalAlignment="Bottom">گرفتن یک نسخه ی پشتیبان از پایگاه داده ی فعلی</Button>
+        <Button  Margin="12,0,20,124" Name="button2" Click="button2_Click" Height="30" VerticalAlignment="Bottom">برگرداندن آخرین نسخه ی پشتیبان از پایگاه داده</Button>
+        <Button  Height="30" Margin="105,0,26,22" Name="button3" VerticalAlignment="Bottom" Click="button3_Click">رفتن به برنامه ی اصلی</Button>
+        <Button  Height="30" Margin="22,0,0,22" Name="button4" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="68" Click="button4_Click">خروج</Button>
+        <Label  Content="برنامه پشتیبانی و مدیریت داده های نگین" Height="35" Margin="8,2,9,0" Name="label1" VerticalAlignment="Top" FontSize="17" Foreground="DarkBlue"></Label>
+        <Image Margin="58,45,72,0" Name="image1" Stretch="Fill" Source="/BackUpAndRestoreDb;component/Download Database.png" Height="184" VerticalAlignment="Top" />
+        <Button Content="ارسال اطلاعات پایگاه داده ها بر روی وب سایت" Height="30" Margin="29,0,33,80" Name="button5" VerticalAlignment="Bottom" Click="button5_Click" />
+    </Grid>
+</Window>

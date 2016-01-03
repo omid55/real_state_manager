@@ -1,0 +1,598 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+using System.Windows.Threading;
+using System.Data;
+using System.ComponentModel;
+
+namespace NeginProject
+{
+    /// <summary>
+    /// Interaction logic for ResultWindow.xaml
+    /// </summary>
+    public partial class ResultWindow : Window
+    {
+        private DispatcherTimer t;
+        public DataTable dt;
+        public int which;
+        private bool desc = false;
+        public Session session;
+
+        public ResultWindow()
+        {
+            InitializeComponent();
+            t = new DispatcherTimer();
+            t.Tick += new EventHandler(t_Tick);
+            t.Interval = TimeSpan.FromSeconds(0.1);
+            t.Start();
+
+            gridView.AlternatingRowsDefaultCellStyle.BackColor = System.Drawing.Color.Orange;
+            gridView.AllowUserToAddRows = false;
+        }
+
+        void t_Tick(object sender, EventArgs e)
+        {
+            if (gridView.Focused) t.Stop();
+            gridView.Focus();
+        }
+
+        private void WindowsFormsHost_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Escape) Close();
+            else if (e.Key == Key.RightCtrl || e.Key == Key.LeftCtrl)
+            {
+                int ind = gridView.SelectedCells[0].ColumnIndex;
+                if (desc)
+                {
+                    desc = false;
+                    gridView.Sort(gridView.Columns[ind], ListSortDirection.Ascending);
+                }
+                else
+                {
+                    desc = true;
+                    gridView.Sort(gridView.Columns[ind], ListSortDirection.Descending);
+                }
+            }
+            else if (e.Key == Key.Enter)
+            {
+                if (gridView.SelectedCells.Count == 0) return;
+                int index = gridView.SelectedCells[0].RowIndex;
+                if (index != gridView.Rows.Count - 1) index--;
+                if (index < 0) return;
+                
+                //DataTable now = (DataTable)gridView.DataSource;
+                //String s1 = now.Rows[0].ItemArray[0].ToString();
+                //String s2 = now.Rows[1].ItemArray[0].ToString();
+                //String s3 = now.Rows[2].ItemArray[0].ToString();
+                //System.Windows.Forms.CurrencyManager
+                
+                Object[] obj;
+                TextRange _RText;
+                switch (which)
+                {
+                    case Codes.ApartmanEdariEstijari:
+                        Results.ApartmanEdariS aes = new Results.ApartmanEdariS();
+                        aes.session = session;
+                        aes.dt = dt;
+                        aes.index = index;
+                        obj = dt.Rows[index].ItemArray;
+                        aes.ID_Lbl.Content = which + " - " + obj[0].ToString();
+                        aes.date_Lbl.Content = obj[1].ToString();
+                        aes.textBox1.Text = dt.Rows[index].ItemArray[2].ToString();
+                        aes.textBox2.Text = dt.Rows[index].ItemArray[3].ToString();
+                        aes.textBox3.Text = dt.Rows[index].ItemArray[4].ToString();
+                        aes.textBox4.Text = dt.Rows[index].ItemArray[5].ToString();
+                        aes.textBox5.Text = dt.Rows[index].ItemArray[6].ToString();
+                        aes.textBox6.Text = dt.Rows[index].ItemArray[7].ToString();
+                        aes.textBox7.Text = dt.Rows[index].ItemArray[8].ToString();
+                        aes.textBox8.Text = dt.Rows[index].ItemArray[9].ToString();
+                        aes.textBox9.Text = dt.Rows[index].ItemArray[10].ToString();
+                        aes.textBox10.Text = dt.Rows[index].ItemArray[11].ToString();
+                        aes.textBox11.Text = dt.Rows[index].ItemArray[12].ToString();
+                        aes.textBox12.Text = dt.Rows[index].ItemArray[13].ToString();
+                        aes.textBox13.Text = dt.Rows[index].ItemArray[14].ToString();
+                        aes.textBox14.Text = dt.Rows[index].ItemArray[15].ToString();
+                        aes.textBox15.Text = dt.Rows[index].ItemArray[16].ToString();
+                        aes.textBox16.Text = dt.Rows[index].ItemArray[17].ToString();
+                        aes.textBox17.Text = dt.Rows[index].ItemArray[18].ToString();
+                        aes.textBox18.Text = dt.Rows[index].ItemArray[19].ToString();
+                        aes.textBox19.Text = dt.Rows[index].ItemArray[20].ToString();
+                        aes.textBox20.Text = MyPriceTextBox.doMaskOnce(dt.Rows[index].ItemArray[21].ToString());
+                        aes.textBox21.Text = MyPriceTextBox.doMaskOnce(dt.Rows[index].ItemArray[22].ToString());
+                        aes.textBox22.Text = dt.Rows[index].ItemArray[23].ToString();
+                        aes.checkBox1.IsChecked = (bool)obj[24];
+                        aes.checkBox2.IsChecked = (bool)obj[25];
+                        aes.checkBox3.IsChecked = (bool)obj[26];
+                        aes.checkBox4.IsChecked = (bool)obj[27];
+                        aes.checkBox5.IsChecked = (bool)obj[28];
+                        aes.checkBox6.IsChecked = (bool)obj[29];
+                        aes.checkBox7.IsChecked = (bool)obj[30];
+                        aes.checkBox8.IsChecked = (bool)obj[31];
+                        aes.checkBox9.IsChecked = (bool)obj[32];
+                        aes.checkBox10.IsChecked = (bool)obj[33];
+                        aes.checkBox11.IsChecked = (bool)obj[34];
+                        aes.checkBox12.IsChecked = (bool)obj[35];
+                        aes.checkBox13.IsChecked = (bool)obj[36];
+                        aes.checkBox14.IsChecked = (bool)obj[37];
+                        aes.checkBox15.IsChecked = (bool)obj[38];
+                        _RText = new TextRange(aes.richTextBox1.Document.ContentStart, aes.richTextBox1.Document.ContentEnd);
+                        _RText.Text = obj[39].ToString();
+                        aes.textBox23.Text = obj[40].ToString();
+                        aes.tw = this;
+                        aes.Show();
+                        break;
+
+                    case Codes.ApartmanEdariForooshi:
+                        Results.ApartmanEdariF aef = new NeginProject.Results.ApartmanEdariF();
+                        aef.session = session;
+                        aef.dt = dt;
+                        aef.index = index;
+                        obj = dt.Rows[index].ItemArray;
+                        aef.ID_Lbl.Content = which + " - " + obj[0].ToString();
+                        aef.date_Lbl.Content = obj[1].ToString();
+                        aef.textBox1.Text = obj[2].ToString();
+                        aef.textBox2.Text = obj[3].ToString();
+                        aef.textBox3.Text = obj[4].ToString();
+                        aef.textBox4.Text = obj[5].ToString();
+                        aef.textBox5.Text = obj[6].ToString();
+                        aef.textBox6.Text = obj[7].ToString();
+                        aef.textBox7.Text = obj[8].ToString();
+                        aef.textBox8.Text = obj[9].ToString();
+                        aef.textBox9.Text = obj[10].ToString();
+                        aef.textBox10.Text = obj[11].ToString();
+                        aef.textBox11.Text = obj[12].ToString();
+                        aef.textBox12.Text = obj[13].ToString();
+                        aef.textBox13.Text = obj[14].ToString();
+                        aef.textBox14.Text = obj[15].ToString();
+                        aef.textBox15.Text = obj[16].ToString();
+                        aef.textBox16.Text = obj[17].ToString();
+                        aef.textBox17.Text = obj[18].ToString();
+                        aef.textBox18.Text = obj[19].ToString();
+                        aef.textBox19.Text = obj[20].ToString();
+                        aef.textBox20.Text = obj[21].ToString();
+                        aef.textBox21.Text = obj[22].ToString();
+                        aef.textBox22.Text = MyPriceTextBox.doMaskOnce(obj[23].ToString());
+                        aef.textBox23.Text = MyPriceTextBox.doMaskOnce(obj[24].ToString());
+                        aef.checkBox1.IsChecked = (bool)obj[25];
+                        aef.checkBox2.IsChecked = (bool)obj[26];
+                        aef.checkBox3.IsChecked = (bool)obj[27];
+                        aef.checkBox4.IsChecked = (bool)obj[28];
+                        aef.checkBox5.IsChecked = (bool)obj[29];
+                        aef.checkBox6.IsChecked = (bool)obj[30];
+                        aef.checkBox7.IsChecked = (bool)obj[31];
+                        aef.checkBox8.IsChecked = (bool)obj[32];
+                        aef.checkBox9.IsChecked = (bool)obj[33];
+                        aef.checkBox10.IsChecked = (bool)obj[34];
+                        aef.checkBox11.IsChecked = (bool)obj[35];
+                        aef.checkBox12.IsChecked = (bool)obj[36];
+                        aef.checkBox13.IsChecked = (bool)obj[37];
+                        aef.checkBox14.IsChecked = (bool)obj[38];
+                        aef.checkBox15.IsChecked = (bool)obj[39];
+                        _RText = new TextRange(aef.richTextBox1.Document.ContentStart, aef.richTextBox1.Document.ContentEnd);
+                        _RText.Text = obj[40].ToString();
+                        aef.textBox24.Text = obj[41].ToString();
+                        aef.tw = this;
+                        aef.Show();
+                        break;
+
+                    case Codes.ApartmanMaskooniEstijari:
+                        Results.ApartmanMaskooniS ams = new NeginProject.Results.ApartmanMaskooniS();
+                        ams.session = session;
+                        ams.dt = dt;
+                        ams.index = index;
+                        obj = dt.Rows[index].ItemArray;
+                        ams.ID_Lbl.Content = which + " - " + obj[0].ToString();
+                        ams.date_Lbl.Content = obj[1].ToString();
+                        ams.textBox1.Text = obj[2].ToString();
+                        ams.textBox2.Text = obj[3].ToString();
+                        ams.textBox3.Text = obj[4].ToString();
+                        ams.textBox4.Text = obj[5].ToString();
+                        ams.textBox5.Text = obj[6].ToString();
+                        ams.textBox6.Text = obj[7].ToString();
+                        ams.textBox7.Text = obj[8].ToString();
+                        ams.textBox8.Text = obj[9].ToString();
+                        ams.textBox9.Text = obj[10].ToString();
+                        ams.textBox10.Text = obj[11].ToString();
+                        ams.textBox11.Text = obj[12].ToString();
+                        ams.textBox12.Text = obj[13].ToString();
+                        ams.textBox13.Text = obj[14].ToString();
+                        ams.textBox14.Text = obj[15].ToString();
+                        ams.textBox15.Text = obj[16].ToString();
+                        ams.textBox16.Text = obj[17].ToString();
+                        ams.textBox17.Text = obj[18].ToString();
+                        ams.textBox18.Text = obj[19].ToString();
+                        ams.textBox19.Text = MyPriceTextBox.doMaskOnce(obj[20].ToString());
+                        ams.textBox20.Text = MyPriceTextBox.doMaskOnce(obj[21].ToString());
+                        ams.textBox21.Text = obj[22].ToString();
+                        ams.checkBox1.IsChecked = (bool)obj[23];
+                        ams.checkBox2.IsChecked = (bool)obj[24];
+                        ams.checkBox3.IsChecked = (bool)obj[25];
+                        ams.checkBox4.IsChecked = (bool)obj[26];
+                        ams.checkBox5.IsChecked = (bool)obj[27];
+                        ams.checkBox6.IsChecked = (bool)obj[28];
+                        ams.checkBox7.IsChecked = (bool)obj[29];
+                        ams.checkBox8.IsChecked = (bool)obj[30];
+                        ams.checkBox9.IsChecked = (bool)obj[31];
+                        ams.checkBox10.IsChecked = (bool)obj[32];
+                        ams.checkBox11.IsChecked = (bool)obj[33];
+                        ams.checkBox12.IsChecked = (bool)obj[34];
+                        ams.checkBox13.IsChecked = (bool)obj[35];
+                        ams.checkBox14.IsChecked = (bool)obj[36];
+                        ams.checkBox15.IsChecked = (bool)obj[37];
+                        ams.checkBox16.IsChecked = (bool)obj[38];
+                        ams.checkBox17.IsChecked = (bool)obj[39];
+                        ams.checkBox18.IsChecked = (bool)obj[40];
+                        ams.checkBox19.IsChecked = (bool)obj[41];
+                        ams.checkBox20.IsChecked = (bool)obj[42];
+                        ams.checkBox21.IsChecked = (bool)obj[43];
+                        ams.checkBox22.IsChecked = (bool)obj[44];
+                        ams.checkBox23.IsChecked = (bool)obj[45];
+                        ams.checkBox24.IsChecked = (bool)obj[46];
+                        ams.checkBox25.IsChecked = (bool)obj[47];
+                        ams.checkBox26.IsChecked = (bool)obj[48];
+                        ams.checkBox27.IsChecked = (bool)obj[49];
+                        _RText = new TextRange(ams.richTextBox1.Document.ContentStart, ams.richTextBox1.Document.ContentEnd);
+                        _RText.Text = obj[50].ToString();
+                        ams.textBox22.Text = obj[51].ToString();
+                        ams.tw = this;
+                        ams.Show();
+                        break;
+
+                    case Codes.ApartmanMaskooniForooshi:
+                        Results.ApartmanMaskooniF amf = new NeginProject.Results.ApartmanMaskooniF();
+                        amf.session = session;
+                        amf.dt = dt;
+                        amf.index = index;
+                        obj = dt.Rows[index].ItemArray;
+                        amf.ID_Lbl.Content = which + " - " + obj[0].ToString();
+                        amf.date_Lbl.Content = obj[1].ToString();
+                        amf.textBox1.Text = obj[2].ToString();
+                        amf.textBox2.Text = obj[3].ToString();
+                        amf.textBox3.Text = obj[4].ToString();
+                        amf.textBox4.Text = obj[5].ToString();
+                        amf.textBox5.Text = obj[6].ToString();
+                        amf.textBox6.Text = obj[7].ToString();
+                        amf.textBox7.Text = obj[8].ToString();
+                        amf.textBox8.Text = obj[9].ToString();
+                        amf.textBox9.Text = obj[10].ToString();
+                        amf.textBox10.Text = obj[11].ToString();
+                        amf.textBox11.Text = obj[12].ToString();
+                        amf.textBox12.Text = obj[13].ToString();
+                        amf.textBox13.Text = obj[14].ToString();
+                        amf.textBox14.Text = obj[15].ToString();
+                        amf.textBox15.Text = obj[16].ToString();
+                        amf.textBox16.Text = obj[17].ToString();
+                        amf.textBox17.Text = obj[18].ToString();
+                        amf.textBox18.Text = obj[19].ToString();
+                        amf.textBox19.Text = obj[20].ToString();
+                        amf.textBox20.Text = MyPriceTextBox.doMaskOnce(obj[21].ToString());
+                        amf.textBox21.Text = MyPriceTextBox.doMaskOnce(obj[22].ToString());
+                        amf.checkBox1.IsChecked = (bool)obj[23];
+                        amf.checkBox2.IsChecked = (bool)obj[24];
+                        amf.checkBox3.IsChecked = (bool)obj[25];
+                        amf.checkBox4.IsChecked = (bool)obj[26];
+                        amf.checkBox5.IsChecked = (bool)obj[27];
+                        amf.checkBox6.IsChecked = (bool)obj[28];
+                        amf.checkBox7.IsChecked = (bool)obj[29];
+                        amf.checkBox8.IsChecked = (bool)obj[30];
+                        amf.checkBox9.IsChecked = (bool)obj[31];
+                        amf.checkBox10.IsChecked = (bool)obj[32];
+                        amf.checkBox11.IsChecked = (bool)obj[33];
+                        amf.checkBox12.IsChecked = (bool)obj[34];
+                        amf.checkBox13.IsChecked = (bool)obj[35];
+                        amf.checkBox14.IsChecked = (bool)obj[36];
+                        amf.checkBox15.IsChecked = (bool)obj[37];
+                        amf.checkBox16.IsChecked = (bool)obj[38];
+                        amf.checkBox17.IsChecked = (bool)obj[39];
+                        amf.checkBox18.IsChecked = (bool)obj[40];
+                        amf.checkBox19.IsChecked = (bool)obj[41];
+                        amf.checkBox20.IsChecked = (bool)obj[42];
+                        amf.checkBox21.IsChecked = (bool)obj[43];
+                        amf.checkBox22.IsChecked = (bool)obj[44];
+                        amf.checkBox23.IsChecked = (bool)obj[45];
+                        amf.checkBox24.IsChecked = (bool)obj[46];
+                        amf.checkBox25.IsChecked = (bool)obj[47];
+                        amf.checkBox26.IsChecked = (bool)obj[48];
+                        amf.checkBox27.IsChecked = (bool)obj[49];
+                        _RText = new TextRange(amf.richTextBox1.Document.ContentStart, amf.richTextBox1.Document.ContentEnd);
+                        _RText.Text = obj[50].ToString();
+                        amf.textBox22.Text = obj[51].ToString();
+                        amf.tw = this;
+                        amf.Show();
+                        break;
+
+                    case Codes.BaghVillaForooshi:
+                        Results.BaghVillaF bvf = new Results.BaghVillaF();
+                        bvf.session = session;
+                        bvf.dt = dt;
+                        bvf.index = index;
+                        obj = dt.Rows[index].ItemArray;
+                        bvf.ID_Lbl.Content = which + " - " + obj[0].ToString();
+                        bvf.date_Lbl.Content = obj[1].ToString();
+                        bvf.textBox1.Text = obj[2].ToString();
+                        bvf.textBox2.Text = obj[3].ToString();
+                        bvf.textBox3.Text = obj[4].ToString();
+                        bvf.textBox4.Text = obj[5].ToString();
+                        bvf.textBox5.Text = obj[6].ToString();
+                        bvf.textBox6.Text = obj[7].ToString();
+                        bvf.textBox7.Text = obj[8].ToString();
+                        bvf.textBox8.Text = obj[9].ToString();
+                        bvf.textBox9.Text = obj[10].ToString();
+                        bvf.textBox10.Text = obj[11].ToString();
+                        bvf.textBox11.Text = obj[12].ToString();
+                        bvf.textBox12.Text = obj[13].ToString();
+                        bvf.textBox13.Text = obj[14].ToString();
+                        bvf.textBox14.Text = obj[15].ToString();
+                        bvf.textBox15.Text = obj[16].ToString();
+                        bvf.textBox16.Text = obj[17].ToString();
+                        bvf.textBox17.Text = obj[18].ToString();
+                        bvf.textBox18.Text = obj[19].ToString();
+                        bvf.textBox19.Text = obj[20].ToString();
+                        bvf.textBox20.Text = obj[21].ToString();
+                        bvf.textBox21.Text = obj[22].ToString();
+                        bvf.textBox22.Text = MyPriceTextBox.doMaskOnce(obj[23].ToString());
+                        bvf.textBox23.Text = MyPriceTextBox.doMaskOnce(obj[24].ToString());
+                        bvf.checkBox1.IsChecked = (bool)obj[25];
+                        bvf.checkBox2.IsChecked = (bool)obj[26];
+                        bvf.checkBox3.IsChecked = (bool)obj[27];
+                        bvf.checkBox4.IsChecked = (bool)obj[28];
+                        bvf.checkBox5.IsChecked = (bool)obj[29];
+                        bvf.checkBox6.IsChecked = (bool)obj[30];
+                        bvf.checkBox7.IsChecked = (bool)obj[31];
+                        bvf.checkBox8.IsChecked = (bool)obj[32];
+                        bvf.checkBox9.IsChecked = (bool)obj[33];
+                        bvf.checkBox10.IsChecked = (bool)obj[34];
+                        bvf.checkBox11.IsChecked = (bool)obj[35];
+                        bvf.checkBox12.IsChecked = (bool)obj[36];
+                        bvf.checkBox13.IsChecked = (bool)obj[37];
+                        bvf.checkBox14.IsChecked = (bool)obj[38];
+                        bvf.checkBox15.IsChecked = (bool)obj[39];
+                        bvf.checkBox16.IsChecked = (bool)obj[40];
+                        bvf.checkBox17.IsChecked = (bool)obj[41];
+                        bvf.checkBox18.IsChecked = (bool)obj[42];
+                        bvf.checkBox19.IsChecked = (bool)obj[43];
+                        bvf.checkBox20.IsChecked = (bool)obj[44];
+                        bvf.checkBox21.IsChecked = (bool)obj[45];
+                        bvf.checkBox22.IsChecked = (bool)obj[46];
+                        bvf.checkBox23.IsChecked = (bool)obj[47];
+                        bvf.checkBox24.IsChecked = (bool)obj[48];
+                        bvf.checkBox25.IsChecked = (bool)obj[49];
+                        bvf.checkBox26.IsChecked = (bool)obj[50];
+                        bvf.checkBox27.IsChecked = (bool)obj[51];
+                        bvf.checkBox28.IsChecked = (bool)obj[52];
+                        bvf.checkBox29.IsChecked = (bool)obj[53];
+                        bvf.checkBox30.IsChecked = (bool)obj[54];
+                        _RText = new TextRange(bvf.richTextBox1.Document.ContentStart, bvf.richTextBox1.Document.ContentEnd);
+                        _RText.Text = obj[55].ToString();
+                        bvf.textBox24.Text = obj[56].ToString();
+                        bvf.tw = this;
+                        bvf.Show();
+                        break;
+
+                    case Codes.HouseEstijari:
+                        obj = dt.Rows[index].ItemArray;
+                        Results.HouseS hos = new Results.HouseS(obj[0].ToString());
+                        hos.session = session;
+                        hos.dt = dt;
+                        hos.index = index;
+                        hos.ID_Lbl.Content = which + " - " + obj[0].ToString();
+                        hos.date_Lbl.Content = obj[1].ToString();
+                        hos.textBox1.Text = obj[2].ToString();
+                        hos.textBox2.Text = obj[3].ToString();
+                        hos.textBox3.Text = obj[4].ToString();
+                        hos.textBox4.Text = obj[5].ToString();
+                        hos.textBox5.Text = obj[6].ToString();
+                        hos.textBox6.Text = obj[7].ToString();
+                        hos.textBox7.Text = obj[8].ToString();
+                        hos.textBox8.Text = obj[9].ToString();
+                        hos.textBox9.Text = obj[10].ToString();
+                        hos.textBox10.Text = obj[11].ToString();
+                        hos.textBox11.Text = obj[12].ToString();
+                        hos.textBox12.Text = obj[13].ToString();
+                        hos.textBox13.Text = obj[14].ToString();
+                        hos.textBox14.Text = obj[15].ToString();
+                        hos.textBox15.Text = obj[16].ToString();
+                        hos.textBox16.Text = MyPriceTextBox.doMaskOnce(obj[17].ToString());
+                        hos.textBox17.Text = MyPriceTextBox.doMaskOnce(obj[18].ToString());
+                        hos.textBox18.Text = obj[19].ToString();
+                        hos.checkBox1.IsChecked = (bool)obj[20];
+                        hos.checkBox2.IsChecked = (bool)obj[21];
+                        hos.checkBox3.IsChecked = (bool)obj[22];
+                        hos.checkBox4.IsChecked = (bool)obj[23];
+                        hos.checkBox5.IsChecked = (bool)obj[24];
+                        hos.checkBox6.IsChecked = (bool)obj[25];
+                        hos.checkBox7.IsChecked = (bool)obj[26];
+                        hos.checkBox8.IsChecked = (bool)obj[27];
+                        hos.checkBox9.IsChecked = (bool)obj[28];
+                        hos.checkBox10.IsChecked = (bool)obj[29];
+                        hos.checkBox11.IsChecked = (bool)obj[30];
+                        hos.checkBox12.IsChecked = (bool)obj[31];
+                        hos.checkBox13.IsChecked = (bool)obj[32];
+                        hos.checkBox14.IsChecked = (bool)obj[33];
+                        _RText = new TextRange(hos.richTextBox1.Document.ContentStart, hos.richTextBox1.Document.ContentEnd);
+                        _RText.Text = obj[34].ToString();
+                        hos.txt_Moarefino.Text = obj[35].ToString();
+                        hos.tw = this;
+                        hos.Show();
+                        break;
+
+                    case Codes.HouseForooshi:
+                        obj = dt.Rows[index].ItemArray;
+                        Results.HouseF hof = new Results.HouseF(obj[0].ToString());
+                        hof.session = session;
+                        hof.dt = dt;
+                        hof.index = index;
+                        hof.ID_Lbl.Content = which + " - " + obj[0].ToString();
+                        hof.date_Lbl.Content = obj[1].ToString();
+                        hof.textBox1.Text = obj[2].ToString();
+                        hof.textBox2.Text = obj[3].ToString();
+                        hof.textBox3.Text = obj[4].ToString();
+                        hof.textBox4.Text = obj[5].ToString();
+                        hof.textBox5.Text = obj[6].ToString();
+                        hof.textBox6.Text = obj[7].ToString();
+                        hof.textBox7.Text = obj[8].ToString();
+                        hof.textBox8.Text = obj[9].ToString();
+                        hof.textBox9.Text = obj[10].ToString();
+                        hof.textBox10.Text = obj[11].ToString();
+                        hof.textBox11.Text = obj[12].ToString();
+                        hof.textBox12.Text = obj[13].ToString();
+                        hof.textBox13.Text = obj[14].ToString();
+                        hof.textBox14.Text = obj[15].ToString();
+                        hof.textBox15.Text = obj[16].ToString();
+                        hof.textBox16.Text = obj[17].ToString();
+                        hof.textBox17.Text = obj[18].ToString();
+                        hof.textBox18.Text = obj[19].ToString();
+                        hof.textBox19.Text = MyPriceTextBox.doMaskOnce(obj[20].ToString());
+                        hof.textBox20.Text = MyPriceTextBox.doMaskOnce(obj[21].ToString());
+                        hof.textBox21.Text = MyPriceTextBox.doMaskOnce(obj[22].ToString());
+                        hof.checkBox1.IsChecked = (bool)obj[23];
+                        hof.checkBox2.IsChecked = (bool)obj[24];
+                        hof.checkBox3.IsChecked = (bool)obj[25];
+                        hof.checkBox4.IsChecked = (bool)obj[26];
+                        hof.checkBox5.IsChecked = (bool)obj[27];
+                        hof.checkBox6.IsChecked = (bool)obj[28];
+                        hof.checkBox7.IsChecked = (bool)obj[29];
+                        hof.checkBox8.IsChecked = (bool)obj[30];
+                        hof.checkBox9.IsChecked = (bool)obj[31];
+                        hof.checkBox10.IsChecked = (bool)obj[32];
+                        hof.checkBox11.IsChecked = (bool)obj[33];
+                        hof.checkBox12.IsChecked = (bool)obj[34];
+                        hof.checkBox13.IsChecked = (bool)obj[35];
+                        hof.checkBox14.IsChecked = (bool)obj[36];
+                        _RText = new TextRange(hof.richTextBox1.Document.ContentStart, hof.richTextBox1.Document.ContentEnd);
+                        _RText.Text = obj[37].ToString();
+                        hof.txt_Moarefino.Text = obj[38].ToString();
+                        hof.tw = this;
+                        hof.Show();
+                        break;
+
+                    case Codes.MaghazeEstijari:
+                        Results.MaghazeS mas = new Results.MaghazeS();
+                        mas.session = session;
+                        mas.dt = dt;
+                        mas.index = index;
+                        obj = dt.Rows[index].ItemArray;
+                        mas.ID_Lbl.Content = which + " - " + obj[0].ToString();
+                        mas.date_Lbl.Content = obj[1].ToString();
+                        mas.textBox1.Text = obj[2].ToString();
+                        mas.textBox2.Text = obj[3].ToString();
+                        mas.textBox3.Text = obj[4].ToString();
+                        mas.textBox4.Text = obj[5].ToString();
+                        mas.textBox5.Text = obj[6].ToString();
+                        mas.textBox6.Text = obj[7].ToString();
+                        mas.textBox7.Text = obj[8].ToString();
+                        mas.textBox8.Text = obj[9].ToString();
+                        mas.textBox9.Text = obj[10].ToString();
+                        mas.textBox10.Text = obj[11].ToString();
+                        mas.textBox11.Text = obj[12].ToString();
+                        mas.textBox12.Text = obj[13].ToString();
+                        mas.textBox13.Text = obj[14].ToString();
+                        mas.textBox14.Text = obj[15].ToString();
+                        mas.textBox15.Text = obj[16].ToString();
+                        mas.textBox16.Text = obj[17].ToString();
+                        mas.textBox17.Text = obj[18].ToString();
+                        mas.textBox18.Text = obj[19].ToString();
+                        mas.textBox19.Text = obj[20].ToString();
+                        mas.textBox20.Text = obj[21].ToString();
+                        mas.textBox21.Text = MyPriceTextBox.doMaskOnce(obj[22].ToString());
+                        mas.textBox22.Text = MyPriceTextBox.doMaskOnce(obj[23].ToString());
+                        mas.textBox23.Text = obj[24].ToString();
+                        mas.checkBox1.IsChecked = (bool)obj[25];
+                        mas.checkBox2.IsChecked = (bool)obj[26];
+                        mas.checkBox3.IsChecked = (bool)obj[27];
+                        mas.checkBox4.IsChecked = (bool)obj[28];
+                        mas.checkBox5.IsChecked = (bool)obj[29];
+                        mas.checkBox6.IsChecked = (bool)obj[30];
+                        mas.checkBox7.IsChecked = (bool)obj[31];
+                        mas.checkBox8.IsChecked = (bool)obj[32];
+                        mas.checkBox9.IsChecked = (bool)obj[33];
+                        mas.checkBox10.IsChecked = (bool)obj[34];
+                        mas.checkBox11.IsChecked = (bool)obj[35];
+                        mas.checkBox12.IsChecked = (bool)obj[36];
+                        mas.checkBox13.IsChecked = (bool)obj[37];
+                        mas.checkBox14.IsChecked = (bool)obj[38];
+                        mas.checkBox15.IsChecked = (bool)obj[39];
+                        mas.checkBox16.IsChecked = (bool)obj[40];
+                        _RText = new TextRange(mas.richTextBox1.Document.ContentStart, mas.richTextBox1.Document.ContentEnd);
+                        _RText.Text = obj[41].ToString();
+                        mas.txt_Moarefino.Text = obj[42].ToString();
+                        mas.tw = this;
+                        mas.Show();
+                        break;
+
+                    case Codes.MaghazeForooshi:
+                        Results.MaghazeF maf = new Results.MaghazeF();
+                        maf.session = session;
+                        maf.dt = dt;
+                        maf.index = index;
+                        obj = dt.Rows[index].ItemArray;
+                        maf.ID_Lbl.Content = which + " - " + obj[0].ToString();
+                        maf.date_Lbl.Content = obj[1].ToString();
+                        maf.textBox1.Text = obj[2].ToString();
+                        maf.textBox2.Text = obj[3].ToString();
+                        maf.textBox3.Text = obj[4].ToString();
+                        maf.textBox4.Text = obj[5].ToString();
+                        maf.textBox5.Text = obj[6].ToString();
+                        maf.textBox6.Text = obj[7].ToString();
+                        maf.textBox7.Text = obj[8].ToString();
+                        maf.textBox8.Text = obj[9].ToString();
+                        maf.textBox9.Text = obj[10].ToString();
+                        maf.textBox10.Text = obj[11].ToString();
+                        maf.textBox11.Text = obj[12].ToString();
+                        maf.textBox12.Text = obj[13].ToString();
+                        maf.textBox13.Text = obj[14].ToString();
+                        maf.textBox14.Text = obj[15].ToString();
+                        maf.textBox15.Text = obj[16].ToString();
+                        maf.textBox16.Text = obj[17].ToString();
+                        maf.textBox17.Text = obj[18].ToString();
+                        maf.textBox18.Text = obj[19].ToString();
+                        maf.textBox19.Text = obj[20].ToString();
+                        maf.textBox20.Text = obj[21].ToString();
+                        maf.textBox21.Text = obj[22].ToString();
+                        maf.textBox22.Text = MyPriceTextBox.doMaskOnce(obj[23].ToString());
+                        maf.textBox23.Text = MyPriceTextBox.doMaskOnce(obj[24].ToString());
+                        maf.checkBox1.IsChecked = (bool)obj[25];
+                        maf.checkBox2.IsChecked = (bool)obj[26];
+                        maf.checkBox3.IsChecked = (bool)obj[27];
+                        maf.checkBox4.IsChecked = (bool)obj[28];
+                        maf.checkBox5.IsChecked = (bool)obj[29];
+                        maf.checkBox6.IsChecked = (bool)obj[30];
+                        maf.checkBox7.IsChecked = (bool)obj[31];
+                        maf.checkBox8.IsChecked = (bool)obj[32];
+                        maf.checkBox9.IsChecked = (bool)obj[33];
+                        maf.checkBox10.IsChecked = (bool)obj[34];
+                        maf.checkBox11.IsChecked = (bool)obj[35];
+                        maf.checkBox12.IsChecked = (bool)obj[36];
+                        maf.checkBox13.IsChecked = (bool)obj[37];
+                        maf.checkBox14.IsChecked = (bool)obj[38];
+                        maf.checkBox15.IsChecked = (bool)obj[39];
+                        maf.checkBox16.IsChecked = (bool)obj[40];
+                        _RText = new TextRange(maf.richTextBox1.Document.ContentStart, maf.richTextBox1.Document.ContentEnd);
+                        _RText.Text = obj[41].ToString();
+                        maf.txt_Moarefino.Text = obj[42].ToString();
+                        maf.tw = this;
+                        maf.Show();
+                        break;
+                }
+            }
+        }
+
+        private void Print_Button_Click(object sender, RoutedEventArgs e)
+        {
+            PrintDialog pd = new PrintDialog();
+            if(pd.ShowDialog()==true)
+            {
+                pd.PrintVisual(dgv, "DataGridView");
+            }
+        }
+    }
+}

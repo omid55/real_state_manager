@@ -1,0 +1,59 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="BD5EE14F-C32C-42BD-BF24-117EFA7A7F62/d:Insert/f:ApartmanEdariF.xaml" caret="24204" fromTop="1" />
+      <File id="BD5EE14F-C32C-42BD-BF24-117EFA7A7F62/f:About.xaml" caret="2050" fromTop="4" />
+      <File id="69E2809C-C227-489B-8D33-33E63E2C0074/f:UploadDbWnd.xaml.cs" caret="1432" fromTop="11" />
+      <File id="BD5EE14F-C32C-42BD-BF24-117EFA7A7F62/d:Search/f:HouseFAdvanced.xaml" caret="1904" fromTop="4" />
+      <File id="BD5EE14F-C32C-42BD-BF24-117EFA7A7F62/f:MyMaskedTextBox.cs" caret="2190" fromTop="0" />
+      <File id="BD5EE14F-C32C-42BD-BF24-117EFA7A7F62/f:Window1.xaml.cs" caret="27291" fromTop="16" />
+      <File id="BD5EE14F-C32C-42BD-BF24-117EFA7A7F62/f:Window1.xaml" caret="15884" fromTop="6" />
+      <File id="BD5EE14F-C32C-42BD-BF24-117EFA7A7F62/f:LoginConfig.xaml" caret="2029" fromTop="0" />
+      <File id="BD5EE14F-C32C-42BD-BF24-117EFA7A7F62/f:LoginConfig.xaml.cs" caret="4235" fromTop="12" />
+      <File id="BD5EE14F-C32C-42BD-BF24-117EFA7A7F62/f:Login.xaml.cs" caret="1148" fromTop="16" />
+      <File id="BD5EE14F-C32C-42BD-BF24-117EFA7A7F62/f:App.xaml.cs" caret="117" fromTop="4" />
+      <File id="BD5EE14F-C32C-42BD-BF24-117EFA7A7F62/f:PresetItem.cs" caret="38" fromTop="2" />
+      <File id="BD5EE14F-C32C-42BD-BF24-117EFA7A7F62/f:Codes.cs" caret="0" fromTop="0" />
+      <File id="BD5EE14F-C32C-42BD-BF24-117EFA7A7F62/f:MediaWindow.xaml" caret="17275" fromTop="8" />
+      <File id="BD5EE14F-C32C-42BD-BF24-117EFA7A7F62/f:MediaWindow.xaml.cs" caret="4961" fromTop="10" />
+      <File id="BD5EE14F-C32C-42BD-BF24-117EFA7A7F62/f:Result3D.xaml" caret="4443" fromTop="4" />
+      <File id="BD5EE14F-C32C-42BD-BF24-117EFA7A7F62/f:Result3D.xaml.cs" caret="953" fromTop="16" />
+      <File id="BD5EE14F-C32C-42BD-BF24-117EFA7A7F62/d:Insert/f:HouseS.xaml.cs" caret="11103" fromTop="7" />
+      <File id="BD5EE14F-C32C-42BD-BF24-117EFA7A7F62/f:MyCrypt.cs" caret="3185" fromTop="12" />
+      <File id="BD5EE14F-C32C-42BD-BF24-117EFA7A7F62/f:Loading.xaml.cs" caret="1705" fromTop="15" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="BD5EE14F-C32C-42BD-BF24-117EFA7A7F62/d:Insert/f:ApartmanEdariF.xaml" caret="234" fromTop="4" />
+      <File id="BD5EE14F-C32C-42BD-BF24-117EFA7A7F62/d:Insert/f:ApartmanEdariF.xaml" caret="24204" fromTop="274" />
+      <File id="BD5EE14F-C32C-42BD-BF24-117EFA7A7F62/f:About.xaml" caret="260" fromTop="3" />
+      <File id="BD5EE14F-C32C-42BD-BF24-117EFA7A7F62/f:About.xaml" caret="3645" fromTop="20" />
+      <File id="BD5EE14F-C32C-42BD-BF24-117EFA7A7F62/f:Codes.cs" caret="0" fromTop="0" />
+      <File id="BD5EE14F-C32C-42BD-BF24-117EFA7A7F62/f:Codes.cs" caret="2802" fromTop="88" />
+      <File id="BD5EE14F-C32C-42BD-BF24-117EFA7A7F62/d:Search/f:HouseFAdvanced.xaml" caret="1981" fromTop="4" />
+      <File id="BD5EE14F-C32C-42BD-BF24-117EFA7A7F62/f:MediaWindow.xaml.cs" caret="6604" fromTop="4" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Qualified:Xceed.Wpf.DataGrid.DataGridControl">
+      <Item value="SelectedIndex" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

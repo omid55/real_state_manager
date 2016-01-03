@@ -1,0 +1,372 @@
+﻿<Window x:Class="NeginProject.Insert.HouseS"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Height="680" Width="1191"
+    xmlns:wfi="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
+    xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms" FontFamily="Tahoma"
+    FontSize="20" KeyUp="Window_KeyUp" WindowState="Maximized" Background="LightBlue" 
+    xmlns:my="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration" 
+    xmlns:my1="http://schemas.microsoft.com/wpf/2008/toolkit" Title="فرم ثبت منزل يا مجموعه استيجاري" 
+    Loaded="Window_Loaded" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
+    <Window.Resources>
+        <Style x:Key="MediaButtonTheme" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <ControlTemplate.Resources>
+                            <Storyboard x:Key="Storyboard1">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="grid">
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="1.25"/>
+                                </DoubleAnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="grid">
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="1.25"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="Storyboard_Copy1">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="grid">
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="grid">
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </ControlTemplate.Resources>
+                        <Grid x:Name="grid" RenderTransformOrigin="0.5,0.5">
+                            <Grid.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Grid.RenderTransform>
+                            <Image Source="/NeginProject;component/Images/image.png"/>
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Trigger.ExitActions>
+                                    <BeginStoryboard x:Name="Storyboard_Copy1_BeginStoryboard" Storyboard="{StaticResource Storyboard_Copy1}"/>
+                                </Trigger.ExitActions>
+                                <Trigger.EnterActions>
+                                    <BeginStoryboard Storyboard="{StaticResource Storyboard1}"/>
+                                </Trigger.EnterActions>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <StackPanel Name="mainSP">
+        <Grid>
+            <Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stroke="Black" StrokeThickness="1">
+
+            </Rectangle>
+            <Grid Height="80" VerticalAlignment="Top" Name="Caption">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="215*"  />
+                    <ColumnDefinition Width="785*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Content="تاريخ :" FlowDirection="RightToLeft" Name="Lbl_DatePrompt"
+                           HorizontalAlignment="Left" 
+                           VerticalAlignment="Top" Margin="190,0,0,0"></Label>
+                <Label Content="Date" Grid.Column="0" 
+                           FlowDirection="RightToLeft" Name="date_Lbl"
+                           HorizontalAlignment="Left" 
+                           VerticalAlignment="Top"></Label>
+                <Label Content="شماره :" FlowDirection="RightToLeft" Name="Lbl_IDPrompt"
+                               HorizontalAlignment="Left" 
+                               VerticalAlignment="Bottom" Margin="174,0,0,0"></Label>
+                <Label Content="ID" Grid.Column="0" 
+                               Name="ID_Lbl"
+                               HorizontalAlignment="Left" 
+                               VerticalAlignment="Bottom"></Label>
+                <Label FontSize="25" Content="فرم ثبت منزل يا مجموعه استيجاري" Grid.Column="1" 
+                               FlowDirection="RightToLeft" Name="Lbl_HeaderText" Margin="179,0,358,24" Foreground="#FF3956D3"></Label>
+                <CheckBox FontSize="15" FlowDirection="RightToLeft"  Margin="350,0,24,0" Name="AgainCheckBox" VerticalAlignment="Bottom" Grid.Column="1" Height="24">پس از ثبت داده ها را در این صفحه برای ثبت بعدی نگه دار</CheckBox>
+                <Button Click="Print_Button_Click" Height="48" HorizontalAlignment="Left" Margin="75,7,0,0" Name="Print_Button" VerticalAlignment="Top" Width="57" Grid.Column="1">
+                    <Image Height="46" Source="/NeginProject;component/Images/printer.png" />
+                </Button>
+                <Button Content="Button" Height="35" HorizontalAlignment="Right" Margin="0,14,255,0" Name="MediaButton" Click="MediaButton_Click" Style="{DynamicResource MediaButtonTheme}" VerticalAlignment="Top" Width="47" Grid.Column="1" />
+            </Grid>
+        </Grid>
+        <Grid  VerticalAlignment="Top" Name="FirstOrder">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="36*" />
+                <RowDefinition Height="58*" />
+                <RowDefinition Height="56*" />
+            </Grid.RowDefinitions>
+            <Rectangle HorizontalAlignment="Stretch" Grid.ColumnSpan="6" Grid.RowSpan="4" VerticalAlignment="Stretch" Stroke="Black" StrokeThickness="1"></Rectangle>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="954.637*" />
+                    <ColumnDefinition Width="45.363*" />
+                </Grid.ColumnDefinitions>
+                <Label Content="آدرس :" 
+                                FlowDirection="RightToLeft" Name="Lbl_Address" 
+                                HorizontalAlignment="Right" Grid.ColumnSpan="2" Width="74"></Label>
+                <TextBox TextChanged="textBox_TextChanged"  FlowDirection="RightToLeft"
+                         Name="textBox1" Margin="51,0,26,0" TabIndex="0">
+
+                </TextBox>
+            </Grid>
+            <Grid Grid.Row="1" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="185*" />
+                    <ColumnDefinition Width="206*" />
+                    <ColumnDefinition Width="163*" />
+                    <ColumnDefinition Width="171*" />
+                    <ColumnDefinition Width="185*" />
+                    <ColumnDefinition Width="207*" />
+                </Grid.ColumnDefinitions>
+                <Label Content="مساحت زمين :" Grid.Column="5" 
+                               FlowDirection="RightToLeft" Name="Lbl_Area"
+                               HorizontalAlignment="Right" 
+                               VerticalAlignment="Center" ></Label>
+                <TextBox TextChanged="textBox_TextChanged"  Grid.Column="5" FlowDirection="RightToLeft"
+                         Name="textBox2" TextAlignment="Center" Margin="0,2,133,2" HorizontalAlignment="Right" Width="84" TabIndex="1">
+
+                </TextBox>
+                <Label Content="عرض زمين :" Grid.Column="4" 
+                               FlowDirection="RightToLeft" Name="Lbl_Width1"
+                               HorizontalAlignment="Right" 
+                               VerticalAlignment="Center" ></Label>
+                <TextBox TextChanged="textBox_TextChanged"  Grid.Column="3" FlowDirection="RightToLeft"
+                         Name="textBox3" TextAlignment="Center" Margin="0,2,123,2" HorizontalAlignment="Right" Width="90" Grid.ColumnSpan="2" TabIndex="2">
+
+                </TextBox>
+                <Label Content="بر زمين :" Grid.Column="3" 
+                               FlowDirection="RightToLeft" Name="Lbl_Width2"
+                               HorizontalAlignment="Right" 
+                               VerticalAlignment="Center" Margin="0,0,26,0"></Label>
+                <TextBox TextChanged="textBox_TextChanged"  Grid.Column="2" FlowDirection="RightToLeft"
+                         Name="textBox4" TextAlignment="Center" Margin="0,2,106,2" HorizontalAlignment="Right" Width="99" Grid.ColumnSpan="2" TabIndex="3">
+
+                </TextBox>
+                <Label Content="زير بنا :" Grid.Column="2" 
+                               FlowDirection="RightToLeft" Name="Lbl_ZirArea"
+                               HorizontalAlignment="Right" 
+                               VerticalAlignment="Center" Margin="0,0,26,0"></Label>
+                <TextBox TextChanged="textBox_TextChanged"  Grid.Column="1" FlowDirection="RightToLeft"
+                         Name="textBox5" TextAlignment="Center" Margin="0,2,92,2" HorizontalAlignment="Right" Width="98" Grid.ColumnSpan="2" TabIndex="4">
+
+                </TextBox>
+                <Label Content="متراژ مفيد :" Grid.Column="1" 
+                               FlowDirection="RightToLeft" Name="Lbl_GoodArea"
+                               HorizontalAlignment="Right" 
+                               VerticalAlignment="Center" Margin="0,0,26,0"></Label>
+                <TextBox TextChanged="textBox_TextChanged"  FlowDirection="RightToLeft"
+                         Name="textBox6" TextAlignment="Center" Margin="0,2,159,2" Grid.ColumnSpan="2" HorizontalAlignment="Right" Width="91" TabIndex="5">
+
+                </TextBox>
+            </Grid>
+            <Grid Grid.Row="2" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="185*" />
+                    <ColumnDefinition Width="206*" />
+                    <ColumnDefinition Width="163*" />
+                    <ColumnDefinition Width="171*" />
+                    <ColumnDefinition Width="185*" />
+                    <ColumnDefinition Width="207*" />
+                </Grid.ColumnDefinitions>
+                <Label Content="تعداد طبقات :" Grid.Column="5" 
+                               FlowDirection="RightToLeft" Name="Lbl_Floors" Margin="42.967,0,0,0"></Label>
+                <TextBox TextChanged="textBox_TextChanged"  Grid.Column="5" FlowDirection="RightToLeft"
+                         Name="textBox8" TextAlignment="Center" Margin="0,2,133,2" HorizontalAlignment="Right" Width="84" TabIndex="6">
+
+                </TextBox>
+                <Label Content="تعداد واحدها :" Grid.Column="4" 
+                               FlowDirection="RightToLeft" Name="Lbl_Flats" HorizontalAlignment="Right" Width="136.422"></Label>
+                <TextBox TextChanged="textBox_TextChanged"  Grid.Column="3" FlowDirection="RightToLeft"
+                         Name="textBox9" TextAlignment="Center" Margin="0,2,123,2" HorizontalAlignment="Right" Width="90" Grid.ColumnSpan="2" TabIndex="7">
+
+                </TextBox>
+                <Label Content="معبر :" Grid.Column="3" 
+                               FlowDirection="RightToLeft" Name="Lbl_Mabar"
+                               HorizontalAlignment="Right" 
+                               VerticalAlignment="Center" Margin="0,0,26,0"></Label>
+                <TextBox TextChanged="textBox_TextChanged"  Grid.Column="2" FlowDirection="RightToLeft"
+                         Name="textBox10" Margin="0,2,106,2" HorizontalAlignment="Right" Width="99" Grid.ColumnSpan="2" TabIndex="8">
+
+                </TextBox>
+                <Label Content="نما :" Grid.Column="2" 
+                               FlowDirection="RightToLeft" Name="Lbl_nama"
+                               HorizontalAlignment="Right" 
+                               VerticalAlignment="Center" Margin="0,0,26,0"></Label>
+                <TextBox TextChanged="textBox_TextChanged"  Grid.Column="1" FlowDirection="RightToLeft"
+                         Name="textBox11" Margin="0,2,92,2" HorizontalAlignment="Right" Width="98" Grid.ColumnSpan="2" TabIndex="9">
+
+                </TextBox>
+                <TextBox TextChanged="textBox_TextChanged"  FlowDirection="RightToLeft" Name="textBox7" Margin="0,-1,159,5" Grid.ColumnSpan="2" HorizontalAlignment="Right" Width="91" TabIndex="10"></TextBox>
+                <Label Content="مدت ساخت :"  FlowDirection="RightToLeft" Name="Lbl_Yearold" Margin="0,-3,27,3" Grid.Column="1" HorizontalAlignment="Right" Width="133.075"></Label>
+            </Grid>
+        </Grid>
+        <Grid VerticalAlignment="Top" Name="_2ndOrder">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="339*" />
+                <ColumnDefinition Width="152.44*" />
+                <ColumnDefinition Width="163*" />
+                <ColumnDefinition Width="356*" />
+                <ColumnDefinition Width="106*" />
+            </Grid.ColumnDefinitions>
+            <Rectangle Grid.ColumnSpan="5" Stroke="Black" StrokeThickness="1">
+
+            </Rectangle>
+            <Label Content="تاسيسات :"  FlowDirection="RightToLeft" Name="Lbl_tasisat" Margin="0,2,0,-2" Grid.Column="3" HorizontalAlignment="Left" Width="105.405"></Label>
+            <TextBox TextChanged="textBox_TextChanged"  FlowDirection="RightToLeft" Name="textBox12" Margin="0,3,14,1" Grid.ColumnSpan="2" HorizontalAlignment="Right" Width="314.325" Grid.Column="1" TabIndex="12"></TextBox>
+            <Label FlowDirection="RightToLeft"  Margin="0,1,0,-1" Name="Lbl_Sanad" Grid.Column="3" Grid.ColumnSpan="2" HorizontalAlignment="Right" Width="133.27">وضعيت تخليه :</Label>
+            <TextBox TextChanged="textBox_TextChanged" FlowDirection="RightToLeft"  Margin="0,2,21.646,2" Name="textBox13" Grid.Column="3" HorizontalAlignment="Right" Width="239" TabIndex="11" />
+        </Grid>
+        <Grid  VerticalAlignment="Top" Name="_3rdOrder">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="288*" />
+                <ColumnDefinition Width="712*" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40*" />
+                    <RowDefinition Height="220*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="146*" />
+                    <ColumnDefinition Width="142*" />
+                </Grid.ColumnDefinitions>
+                <Rectangle Stroke="Black" StrokeThickness="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
+
+                </Rectangle>
+                <Label Content="موقعيت" 
+                           FlowDirection="RightToLeft" Name="Lbl_Mogheiat" 
+                           VerticalAlignment="Center" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" ></Label>
+                <Label Content="امکانات" 
+                           FlowDirection="RightToLeft" Name="Lbl_Emkanat"                           VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" ></Label>
+                <StackPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center">
+                    <CheckBox TabIndex="19" Content="شمالي" Name="checkBox1"  FlowDirection="RightToLeft"></CheckBox>
+                    <CheckBox TabIndex="20" Content="جنوبي"  Name="checkBox2" FlowDirection="RightToLeft"></CheckBox>
+                    <CheckBox TabIndex="21" Content="شرقي"  Name="checkBox3" FlowDirection="RightToLeft"></CheckBox>
+                    <CheckBox TabIndex="22" Content="غربي"  Name="checkBox4" FlowDirection="RightToLeft"></CheckBox>
+                    <CheckBox TabIndex="23" Content="بن بست"  Name="checkBox5" FlowDirection="RightToLeft"></CheckBox>
+                    <CheckBox TabIndex="24" Content="کوچه"  Name="checkBox6" FlowDirection="RightToLeft"></CheckBox>
+                    <CheckBox TabIndex="25" FontSize="18" Content="بر خيابان"  Name="checkBox7" FlowDirection="RightToLeft"></CheckBox>
+                </StackPanel>
+                <StackPanel Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center">
+                    <CheckBox TabIndex="26" Content="تلفن" Name="checkBox8"  FlowDirection="RightToLeft"></CheckBox>
+                    <CheckBox TabIndex="27" Content="پارکينگ"  Name="checkBox9" FlowDirection="RightToLeft"></CheckBox>
+                    <CheckBox TabIndex="28" Content="انباري"  Name="checkBox10" FlowDirection="RightToLeft"></CheckBox>
+                    <CheckBox TabIndex="29" Content="آسانسور"  Name="checkBox11" FlowDirection="RightToLeft"></CheckBox>
+                    <CheckBox TabIndex="30" Content="استخر"  Name="checkBox12" FlowDirection="RightToLeft"></CheckBox>
+                    <CheckBox TabIndex="31" Content="سونا"  Name="checkBox13" FlowDirection="RightToLeft"></CheckBox>
+                    <CheckBox TabIndex="32" FontSize="18" Content="جکوزي"  Name="checkBox14" FlowDirection="RightToLeft"></CheckBox>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="180*" />
+                    <RowDefinition Height="19.324*" />
+                    <RowDefinition Height="17.911*" />
+                    <RowDefinition Height="42.84*" />
+                </Grid.RowDefinitions>
+                <Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.RowSpan="4"
+                           Stroke="Black" StrokeThickness="1">
+
+                </Rectangle>
+                <wfi:WindowsFormsHost FontSize="15" FlowDirection="RightToLeft" Name="WinFormHost" Margin="0,0,0,4" Grid.RowSpan="3" TabIndex="13">
+                    <wf:DataGridView AutoSize="True" AllowUserToAddRows="True" AllowUserToDeleteRows="True" AllowUserToOrderColumns="True" AllowUserToResizeColumns="True" AllowUserToResizeRows="True" x:Name="gridView" />
+                </wfi:WindowsFormsHost>
+                <Grid Grid.Row="1" Margin="0,0,0,0.012" Grid.RowSpan="2" VerticalAlignment="Bottom">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="436*" />
+                        <ColumnDefinition Width="276*" />
+                    </Grid.ColumnDefinitions>
+                </Grid>
+                <Grid Grid.Row="3" Margin="0,1.853,0,0" VerticalAlignment="Top">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="436*" />
+                        <ColumnDefinition Width="276*" />
+                    </Grid.ColumnDefinitions>
+                </Grid>
+                <Grid Grid.Row="3" Margin="0,0,0,1" VerticalAlignment="Bottom">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="42*" />
+                        <RowDefinition Height="38*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="436*" />
+                        <ColumnDefinition Width="276*" />
+                    </Grid.ColumnDefinitions>
+                    <Rectangle Stroke="Black" Grid.ColumnSpan="2" Grid.Row="2"></Rectangle>
+                    <Label Content="شرايط تبديل :" Grid.Column="1" 
+                               FlowDirection="RightToLeft" Name="Lbl_Explain3"
+                               HorizontalAlignment="Right" Width="138.34" Margin="0,-2,0,4.28"></Label>
+                    <TextBox TextChanged="textBox_TextChanged"  FlowDirection="RightToLeft" Name="textBox18" Margin="0,2,132,5.28" Grid.ColumnSpan="2" HorizontalAlignment="Right" Width="589" TabIndex="14">
+                    </TextBox>
+                    <Label FlowDirection="RightToLeft"  Grid.Column="1" Margin="0,0,0,5" Name="Lbl_Malek" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="64.407" Grid.RowSpan="2">مالک :</Label>
+                    <TextBox TextChanged="textBox_TextChanged" FlowDirection="RightToLeft"  Grid.Column="1" Margin="0,2.86,71,5" Name="textBox14" Grid.Row="1" HorizontalAlignment="Right" Width="230" TabIndex="15" />
+                    <Label FlowDirection="RightToLeft"  Margin="0,0,0,5" Name="Lbl_TelHamahangi" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="193" Grid.RowSpan="2">تلفن هاي هماهنگي :</Label>
+                    <TextBox TextChanged="textBox_TextChanged" FlowDirection="RightToLeft"  Margin="0,2.86,199,5" Name="textBox15" Grid.Row="1" HorizontalAlignment="Right" Width="304" TabIndex="16" />
+                </Grid>
+            </Grid>
+        </Grid>
+        <Grid VerticalAlignment="Top" Name="_4thOrder">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="279*" />
+                <ColumnDefinition Width="82*" />
+                <ColumnDefinition Width="169*" />
+                <ColumnDefinition Width="160*" />
+                <ColumnDefinition Width="316.382*" />
+                <ColumnDefinition Width="110*" />
+            </Grid.ColumnDefinitions>
+            <Rectangle Stroke="Black" StrokeThickness="1" Grid.ColumnSpan="6">
+
+            </Rectangle>
+            <Label Content="ميزان رهن :" 
+                           FlowDirection="RightToLeft" Name="Lbl_Price_harmetr_zamin" 
+                           VerticalAlignment="Center" Grid.Column="5" HorizontalAlignment="Right" ></Label>
+            <TextBox FlowDirection="LeftToRight" Grid.Column="4" Name="textBox16" TextChanged="textBox16_TextChanged" Grid.ColumnSpan="2" Margin="0,12,110,8" HorizontalAlignment="Right" Width="300" TabIndex="17">
+            </TextBox>
+            <Label Content="ميزان اجاره :" 
+                           FlowDirection="RightToLeft" Name="Lbl_Price_harmetr_sakht" Grid.Column="3" Margin="0,7,0,9"></Label>
+            <TextBox  FlowDirection="LeftToRight" Grid.Column="1" Name="textBox17" Margin="0,10,122.87,9" TextChanged="textBox17_TextChanged" Grid.ColumnSpan="3" HorizontalAlignment="Right" Width="299" TabIndex="18">
+            </TextBox>
+        </Grid>
+        <Grid VerticalAlignment="Top" Name="_5thOrder">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="281.664*" />
+                <ColumnDefinition Width="696.336*" />
+            </Grid.ColumnDefinitions>
+            <Rectangle Stroke="Black" StrokeThickness="1" Grid.ColumnSpan="2">
+
+            </Rectangle>
+            <TextBox TextChanged="textBox_TextChanged"  Name="txt_Moarefino" FlowDirection="RightToLeft" Margin="0,40.362,119,40.362" HorizontalAlignment="Right" Width="197" TabIndex="34">
+
+            </TextBox>
+            <Label VerticalAlignment="Center" HorizontalAlignment="Right" FlowDirection="RightToLeft"
+                   Content="نوع معرفي :" >
+
+            </Label>
+            <RichTextBox HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" TextChanged="textBox_TextChanged" Name="richTextBox1" FlowDirection="RightToLeft"  Width="728" Grid.Column="1" Margin="0,14,97.648,10" HorizontalAlignment="Right" TabIndex="33"></RichTextBox>
+            <Label VerticalAlignment="Top" HorizontalAlignment="Right" Grid.Column="1" FlowDirection="RightToLeft"
+                   Content="توضيحات :"  Margin="0,15,0,0" Width="92.91">
+
+            </Label>
+        </Grid>
+        <Grid VerticalAlignment="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="508*" />
+                <ColumnDefinition Width="492*" />
+            </Grid.ColumnDefinitions>
+            <Button  Margin="19,19,0,30" Name="insert_button" HorizontalAlignment="Left" Width="154" Click="insert_button_Click" Grid.Column="1" TabIndex="35">ثبت شود</Button>
+            <Button  Margin="0,19,14,30" Name="back_button" Click="back_button_Click" HorizontalAlignment="Right" Width="132" TabIndex="36">بازگشت</Button>
+            <Image Margin="14,7,0,23" Source="/NeginProject;component/Images/add.png" Grid.Column="1" HorizontalAlignment="Left" Width="51.411" Name="insert_img" />
+            <Image HorizontalAlignment="Right" Margin="0,10,105,25" Source="/NeginProject;component/Images/return.png" Width="46" Name="back_img" />
+        </Grid>
+    </StackPanel>
+</Window>

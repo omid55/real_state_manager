@@ -1,0 +1,84 @@
+C:\Documents and Settings\omid\My Documents\Visual Studio 2008\Projects\BackUpAndRestoreDb\BackUpAndRestoreDb\bin\Debug\BackUpAndRestoreDb.exe
+C:\Documents and Settings\omid\My Documents\Visual Studio 2008\Projects\BackUpAndRestoreDb\BackUpAndRestoreDb\bin\Debug\BackUpAndRestoreDb.pdb
+C:\Documents and Settings\omid\My Documents\Visual Studio 2008\Projects\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\omid\My Documents\Visual Studio 2008\Projects\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\Window1.baml
+C:\Documents and Settings\omid\My Documents\Visual Studio 2008\Projects\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\Window1.g.cs
+C:\Documents and Settings\omid\My Documents\Visual Studio 2008\Projects\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\App.g.cs
+C:\Documents and Settings\omid\My Documents\Visual Studio 2008\Projects\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\BackUpAndRestoreDb_MarkupCompile.cache
+C:\Documents and Settings\omid\My Documents\Visual Studio 2008\Projects\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\BackUpAndRestoreDb.g.resources
+C:\Documents and Settings\omid\My Documents\Visual Studio 2008\Projects\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\BackUpAndRestoreDb.Properties.Resources.resources
+C:\Documents and Settings\omid\My Documents\Visual Studio 2008\Projects\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\BackUpAndRestoreDb.csproj.GenerateResource.Cache
+C:\Documents and Settings\omid\My Documents\Visual Studio 2008\Projects\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\BackUpAndRestoreDb.exe
+C:\Documents and Settings\omid\My Documents\Visual Studio 2008\Projects\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\BackUpAndRestoreDb.pdb
+C:\Documents and Settings\omid\My Documents\Visual Studio 2008\Projects\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\RemoveAll.baml
+C:\Documents and Settings\omid\My Documents\Visual Studio 2008\Projects\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\RemoveAll.g.cs
+C:\MyPlace\MyProgrammingPlace\Programming\Programs with C#\Projects\NeginProject(amlaak)\LATEST\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\BackUpAndRestoreDb.exe
+C:\MyPlace\MyProgrammingPlace\Programming\Programs with C#\Projects\NeginProject(amlaak)\LATEST\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\BackUpAndRestoreDb.pdb
+C:\MyPlace\MyProgrammingPlace\Programming\Programs with C#\Projects\NeginProject(amlaak)\LATEST\BackUpAndRestoreDb\BackUpAndRestoreDb\bin\Debug\BackUpAndRestoreDb.exe
+C:\MyPlace\MyProgrammingPlace\Programming\Programs with C#\Projects\NeginProject(amlaak)\LATEST\BackUpAndRestoreDb\BackUpAndRestoreDb\bin\Debug\BackUpAndRestoreDb.pdb
+C:\MyPlace\MyProgrammingPlace\Programming\Programs with C#\Projects\NeginProject(amlaak)\LATEST\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\ResolveAssemblyReference.cache
+C:\MyPlace\MyProgrammingPlace\Programming\Programs with C#\Projects\NeginProject(amlaak)\LATEST\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\RemoveAll.baml
+C:\MyPlace\MyProgrammingPlace\Programming\Programs with C#\Projects\NeginProject(amlaak)\LATEST\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\Window1.baml
+C:\MyPlace\MyProgrammingPlace\Programming\Programs with C#\Projects\NeginProject(amlaak)\LATEST\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\RemoveAll.g.cs
+C:\MyPlace\MyProgrammingPlace\Programming\Programs with C#\Projects\NeginProject(amlaak)\LATEST\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\Window1.g.cs
+C:\MyPlace\MyProgrammingPlace\Programming\Programs with C#\Projects\NeginProject(amlaak)\LATEST\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\App.g.cs
+C:\MyPlace\MyProgrammingPlace\Programming\Programs with C#\Projects\NeginProject(amlaak)\LATEST\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\BackUpAndRestoreDb_MarkupCompile.cache
+C:\MyPlace\MyProgrammingPlace\Programming\Programs with C#\Projects\NeginProject(amlaak)\LATEST\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\BackUpAndRestoreDb.g.resources
+C:\MyPlace\MyProgrammingPlace\Programming\Programs with C#\Projects\NeginProject(amlaak)\LATEST\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\BackUpAndRestoreDb.Properties.Resources.resources
+C:\MyPlace\MyProgrammingPlace\Programming\Programs with C#\Projects\NeginProject(amlaak)\LATEST\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\ResGen.read.1.tlog
+C:\MyPlace\MyProgrammingPlace\Programming\Programs with C#\Projects\NeginProject(amlaak)\LATEST\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\ResGen.write.1.tlog
+O:\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\BackUpAndRestoreDb.exe
+O:\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\BackUpAndRestoreDb.pdb
+O:\BackUpAndRestoreDb\BackUpAndRestoreDb\bin\Debug\BackUpAndRestoreDb.exe
+O:\BackUpAndRestoreDb\BackUpAndRestoreDb\bin\Debug\BackUpAndRestoreDb.pdb
+O:\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\ResolveAssemblyReference.cache
+O:\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\RemoveAll.baml
+O:\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\UploadDbWnd.baml
+O:\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\Window1.baml
+O:\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\RemoveAll.g.cs
+O:\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\UploadDbWnd.g.cs
+O:\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\Window1.g.cs
+O:\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\App.g.cs
+O:\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\BackUpAndRestoreDb_MarkupCompile.cache
+O:\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\BackUpAndRestoreDb.g.resources
+O:\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\BackUpAndRestoreDb.Properties.Resources.resources
+O:\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\GenerateResource-ResGen.read.1.tlog
+O:\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\ResGen.read.1.tlog
+O:\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\GenerateResource-ResGen.write.1.tlog
+O:\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\ResGen.write.1.tlog
+C:\Users\SONY\Desktop\MyNeginProject\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\BackUpAndRestoreDb.exe
+C:\Users\SONY\Desktop\MyNeginProject\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\BackUpAndRestoreDb.pdb
+C:\Users\SONY\Desktop\MyNeginProject\BackUpAndRestoreDb\BackUpAndRestoreDb\bin\Debug\BackUpAndRestoreDb.exe
+C:\Users\SONY\Desktop\MyNeginProject\BackUpAndRestoreDb\BackUpAndRestoreDb\bin\Debug\BackUpAndRestoreDb.pdb
+C:\Users\SONY\Desktop\MyNeginProject\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\SONY\Desktop\MyNeginProject\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\RemoveAll.baml
+C:\Users\SONY\Desktop\MyNeginProject\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\UploadDbWnd.baml
+C:\Users\SONY\Desktop\MyNeginProject\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\Window1.baml
+C:\Users\SONY\Desktop\MyNeginProject\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\RemoveAll.g.cs
+C:\Users\SONY\Desktop\MyNeginProject\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\UploadDbWnd.g.cs
+C:\Users\SONY\Desktop\MyNeginProject\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\Window1.g.cs
+C:\Users\SONY\Desktop\MyNeginProject\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\App.g.cs
+C:\Users\SONY\Desktop\MyNeginProject\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\BackUpAndRestoreDb_Content.g.cs
+C:\Users\SONY\Desktop\MyNeginProject\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\BackUpAndRestoreDb_MarkupCompile.cache
+C:\Users\SONY\Desktop\MyNeginProject\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\BackUpAndRestoreDb.g.resources
+C:\Users\SONY\Desktop\MyNeginProject\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\BackUpAndRestoreDb.Properties.Resources.resources
+C:\Users\SONY\Desktop\MyNeginProject\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\ResGen.read.1.tlog
+C:\Users\SONY\Desktop\MyNeginProject\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\ResGen.write.1.tlog
+C:\Users\SONY\Documents\Visual Studio 2010\Projects\MyNeginProject\BackUpAndRestoreDb\BackUpAndRestoreDb\bin\Debug\BackUpAndRestoreDb.exe
+C:\Users\SONY\Documents\Visual Studio 2010\Projects\MyNeginProject\BackUpAndRestoreDb\BackUpAndRestoreDb\bin\Debug\BackUpAndRestoreDb.pdb
+C:\Users\SONY\Documents\Visual Studio 2010\Projects\MyNeginProject\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\SONY\Documents\Visual Studio 2010\Projects\MyNeginProject\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\RemoveAll.baml
+C:\Users\SONY\Documents\Visual Studio 2010\Projects\MyNeginProject\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\UploadDbWnd.baml
+C:\Users\SONY\Documents\Visual Studio 2010\Projects\MyNeginProject\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\Window1.baml
+C:\Users\SONY\Documents\Visual Studio 2010\Projects\MyNeginProject\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\RemoveAll.g.cs
+C:\Users\SONY\Documents\Visual Studio 2010\Projects\MyNeginProject\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\UploadDbWnd.g.cs
+C:\Users\SONY\Documents\Visual Studio 2010\Projects\MyNeginProject\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\Window1.g.cs
+C:\Users\SONY\Documents\Visual Studio 2010\Projects\MyNeginProject\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\App.g.cs
+C:\Users\SONY\Documents\Visual Studio 2010\Projects\MyNeginProject\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\BackUpAndRestoreDb_Content.g.cs
+C:\Users\SONY\Documents\Visual Studio 2010\Projects\MyNeginProject\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\BackUpAndRestoreDb_MarkupCompile.cache
+C:\Users\SONY\Documents\Visual Studio 2010\Projects\MyNeginProject\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\BackUpAndRestoreDb.g.resources
+C:\Users\SONY\Documents\Visual Studio 2010\Projects\MyNeginProject\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\BackUpAndRestoreDb.Properties.Resources.resources
+C:\Users\SONY\Documents\Visual Studio 2010\Projects\MyNeginProject\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\ResGen.read.1.tlog
+C:\Users\SONY\Documents\Visual Studio 2010\Projects\MyNeginProject\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\ResGen.write.1.tlog
+C:\Users\SONY\Documents\Visual Studio 2010\Projects\MyNeginProject\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\BackUpAndRestoreDb.exe
+C:\Users\SONY\Documents\Visual Studio 2010\Projects\MyNeginProject\BackUpAndRestoreDb\BackUpAndRestoreDb\obj\Debug\BackUpAndRestoreDb.pdb

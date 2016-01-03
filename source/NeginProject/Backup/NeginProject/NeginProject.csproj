@@ -1,0 +1,583 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BD5EE14F-C32C-42BD-BF24-117EFA7A7F62}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NeginProject</RootNamespace>
+    <AssemblyName>NeginProject</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <PublishUrl>http://localhost/NeginProject/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <ApplicationIcon>Negin.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DockingLibrary, Version=0.1.3722.38229, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\DockingLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="InputSimulator, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\InputSimulator.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsFormsIntegration">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Xceed.Wpf.Controls, Version=3.6.10159.15470, Culture=neutral, PublicKeyToken=ba83ff368b7563c6, processorArchitecture=MSIL" />
+    <Reference Include="Xceed.Wpf.DataGrid, Version=3.6.10159.15470, Culture=neutral, PublicKeyToken=ba83ff368b7563c6, processorArchitecture=MSIL" />
+    <Reference Include="Xceed.Wpf.DataGrid.ThemePack.1, Version=3.6.10159.15470, Culture=neutral, PublicKeyToken=ba83ff368b7563c6, processorArchitecture=MSIL" />
+    <Reference Include="Xceed.Wpf.DataGrid.ThemePack.2, Version=3.6.10159.15470, Culture=neutral, PublicKeyToken=ba83ff368b7563c6, processorArchitecture=MSIL" />
+    <Reference Include="Xceed.Wpf.DataGrid.ThemePack.3, Version=3.6.10159.15470, Culture=neutral, PublicKeyToken=ba83ff368b7563c6, processorArchitecture=MSIL" />
+    <Reference Include="Xceed.Wpf.DataGrid.Views3D, Version=3.6.10159.15470, Culture=neutral, PublicKeyToken=ba83ff368b7563c6, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Control\Block.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\LoadingAnimation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Expiration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Insert\ApartmanEdariF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Insert\ApartmanEdariS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Insert\ApartmanMaskooniF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Insert\ApartmanMaskooniS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Insert\BaghVillaF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Insert\HouseF.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Insert\HouseS.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Insert\MaghazeF.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Insert\MaghazeS.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Loading.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LoginConfig.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PhoneBook.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PriceConfig.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Result3D.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Results\ApartmanEdariF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Results\ApartmanEdariS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Results\ApartmanMaskooniF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Results\ApartmanMaskooniS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Results\BaghVillaF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Results\HouseF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Results\HouseS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Results\MaghazeF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Results\MaghazeS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Search\ApartmanEdariF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Search\ApartmanEdariFAdvanced.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Search\ApartmanEdariS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Search\ApartmanEdariSAdvanced.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Search\ApartmanMaskooniF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Search\ApartmanMaskooniFAdvanced.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Search\ApartmanMaskooniS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Search\ApartmanMaskooniSAdvanced.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Search\BaghVillaF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Search\BaghVillaFAdvanced.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Search\HouseF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Search\HouseFAdvanced.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Search\HouseS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Search\HouseSAdvanced.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Search\MaghazeF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Search\MaghazeFAdvanced.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Search\MaghazeS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Search\MaghazeSAdvanced.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Search\SearchWithID.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ResultWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TreeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WindowConfig.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Calendar.cs" />
+    <Compile Include="Codes.cs" />
+    <Compile Include="ConfigParams.cs" />
+    <Compile Include="Control\Block.xaml.cs">
+      <DependentUpon>Block.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\LoadingAnimation.xaml.cs">
+      <DependentUpon>LoadingAnimation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DB.cs" />
+    <Compile Include="Expiration.xaml.cs">
+      <DependentUpon>Expiration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Insert\ApartmanEdariF.xaml.cs">
+      <DependentUpon>ApartmanEdariF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Insert\ApartmanEdariS.xaml.cs">
+      <DependentUpon>ApartmanEdariS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Insert\ApartmanMaskooniF.xaml.cs">
+      <DependentUpon>ApartmanMaskooniF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Insert\ApartmanMaskooniS.xaml.cs">
+      <DependentUpon>ApartmanMaskooniS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Insert\BaghVillaF.xaml.cs">
+      <DependentUpon>BaghVillaF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Insert\HouseF.xaml.cs">
+      <DependentUpon>HouseF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Insert\HouseS.xaml.cs">
+      <DependentUpon>HouseS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Insert\MaghazeF.xaml.cs">
+      <DependentUpon>MaghazeF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Insert\MaghazeS.xaml.cs">
+      <DependentUpon>MaghazeS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Loading.xaml.cs">
+      <DependentUpon>Loading.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LoginConfig.xaml.cs">
+      <DependentUpon>LoginConfig.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Month.cs" />
+    <Compile Include="MyCrypt.cs" />
+    <Compile Include="MyMaskedTextBox.cs" />
+    <Compile Include="MyPriceTextBox.cs" />
+    <Compile Include="PhoneBook.xaml.cs">
+      <DependentUpon>PhoneBook.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PriceConfig.xaml.cs">
+      <DependentUpon>PriceConfig.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Result3D.xaml.cs">
+      <DependentUpon>Result3D.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Results\ApartmanEdariF.xaml.cs">
+      <DependentUpon>ApartmanEdariF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Results\ApartmanEdariS.xaml.cs">
+      <DependentUpon>ApartmanEdariS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Results\ApartmanMaskooniF.xaml.cs">
+      <DependentUpon>ApartmanMaskooniF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Results\ApartmanMaskooniS.xaml.cs">
+      <DependentUpon>ApartmanMaskooniS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Results\BaghVillaF.xaml.cs">
+      <DependentUpon>BaghVillaF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Results\HouseF.xaml.cs">
+      <DependentUpon>HouseF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Results\HouseS.xaml.cs">
+      <DependentUpon>HouseS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Results\MaghazeF.xaml.cs">
+      <DependentUpon>MaghazeF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Results\MaghazeS.xaml.cs">
+      <DependentUpon>MaghazeS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SearchSQL.cs" />
+    <Compile Include="Search\ApartmanEdariF.xaml.cs">
+      <DependentUpon>ApartmanEdariF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Search\ApartmanEdariFAdvanced.xaml.cs">
+      <DependentUpon>ApartmanEdariFAdvanced.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Search\ApartmanEdariS.xaml.cs">
+      <DependentUpon>ApartmanEdariS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Search\ApartmanEdariSAdvanced.xaml.cs">
+      <DependentUpon>ApartmanEdariSAdvanced.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Search\ApartmanMaskooniF.xaml.cs">
+      <DependentUpon>ApartmanMaskooniF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Search\ApartmanMaskooniFAdvanced.xaml.cs">
+      <DependentUpon>ApartmanMaskooniFAdvanced.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Search\ApartmanMaskooniS.xaml.cs">
+      <DependentUpon>ApartmanMaskooniS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Search\ApartmanMaskooniSAdvanced.xaml.cs">
+      <DependentUpon>ApartmanMaskooniSAdvanced.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Search\BaghVillaF.xaml.cs">
+      <DependentUpon>BaghVillaF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Search\BaghVillaFAdvanced.xaml.cs">
+      <DependentUpon>BaghVillaFAdvanced.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Search\HouseF.xaml.cs">
+      <DependentUpon>HouseF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Search\HouseFAdvanced.xaml.cs">
+      <DependentUpon>HouseFAdvanced.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Search\HouseS.xaml.cs">
+      <DependentUpon>HouseS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Search\HouseSAdvanced.xaml.cs">
+      <DependentUpon>HouseSAdvanced.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Search\MaghazeF.xaml.cs">
+      <DependentUpon>MaghazeF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Search\MaghazeFAdvanced.xaml.cs">
+      <DependentUpon>MaghazeFAdvanced.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Search\MaghazeS.xaml.cs">
+      <DependentUpon>MaghazeS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Search\MaghazeSAdvanced.xaml.cs">
+      <DependentUpon>MaghazeSAdvanced.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Search\SearchWithID.xaml.cs">
+      <DependentUpon>SearchWithID.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ResultWindow.xaml.cs">
+      <DependentUpon>ResultWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TreeWindow.xaml.cs">
+      <DependentUpon>TreeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowConfig.xaml.cs">
+      <DependentUpon>WindowConfig.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WndConfig.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Negin.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\add.png" />
+    <Resource Include="Images\back.png" />
+    <Resource Include="Images\forward.png" />
+    <Resource Include="Images\icon.png" />
+    <Resource Include="Images\ir1.png" />
+    <Resource Include="Images\ir2.png" />
+    <Resource Include="Images\ir3.png" />
+    <Resource Include="Images\ir4.png" />
+    <Resource Include="Images\is1.png" />
+    <Resource Include="Images\is2.png" />
+    <Resource Include="Images\is3.png" />
+    <Resource Include="Images\is4.png" />
+    <Resource Include="Images\is5.png" />
+    <Resource Include="Images\logo.jpg" />
+    <Resource Include="Images\return.png" />
+    <Resource Include="Images\sr1.png" />
+    <Resource Include="Images\sr2.png" />
+    <Resource Include="Images\sr3.png" />
+    <Resource Include="Images\sr4.png" />
+    <Resource Include="Images\ss1.png" />
+    <Resource Include="Images\ss2.png" />
+    <Resource Include="Images\ss3.png" />
+    <Resource Include="Images\ss4.png" />
+    <Resource Include="Images\ss5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\backup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\apply.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\exit.png" />
+    <Resource Include="Images\about.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

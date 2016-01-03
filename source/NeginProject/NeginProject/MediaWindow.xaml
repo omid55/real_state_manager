@@ -1,0 +1,426 @@
+﻿<Window x:Class="NeginProject.MediaWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:xcdg="http://schemas.xceed.com/wpf/xaml/datagrid"
+    xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+    xmlns:coll="clr-namespace:System.Collections;assembly=mscorlib"
+    xmlns:local="clr-namespace:NeginProject"
+    Loaded="Window_Loaded"
+    Title="پنجره منابع مربوطه" Background="LightBlue" FontFamily="Tahoma" FontSize="15" Height="542" Width="775" KeyUp="Window_KeyUp">
+    <Window.Resources>
+        <Style x:Key="AddButtonTheme" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <ControlTemplate.Resources>
+                            <Storyboard x:Key="Storyboard1">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="grid">
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="1.25"/>
+                                </DoubleAnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="grid">
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="1.25"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="Storyboard_Copy1">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="grid">
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="grid">
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </ControlTemplate.Resources>
+                        <Grid x:Name="grid" RenderTransformOrigin="0.5,0.5">
+                            <Grid.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Grid.RenderTransform>
+                            <Image Source="/NeginProject;component/Images/AddImage.png"/>
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Trigger.ExitActions>
+                                    <BeginStoryboard x:Name="Storyboard_Copy1_BeginStoryboard" Storyboard="{StaticResource Storyboard_Copy1}"/>
+                                </Trigger.ExitActions>
+                                <Trigger.EnterActions>
+                                    <BeginStoryboard Storyboard="{StaticResource Storyboard1}"/>
+                                </Trigger.EnterActions>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="BackgroundButtonTheme" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <ControlTemplate.Resources>
+                            <Storyboard x:Key="Storyboard1">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="grid">
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="1.25"/>
+                                </DoubleAnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="grid">
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="1.25"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="Storyboard_Copy1">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="grid">
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="grid">
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </ControlTemplate.Resources>
+                        <Grid x:Name="grid" RenderTransformOrigin="0.5,0.5">
+                            <Grid.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Grid.RenderTransform>
+                            <Image Source="/NeginProject;component/Images/changeTheme.png"/>
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Trigger.ExitActions>
+                                    <BeginStoryboard x:Name="Storyboard_Copy1_BeginStoryboard" Storyboard="{StaticResource Storyboard_Copy1}"/>
+                                </Trigger.ExitActions>
+                                <Trigger.EnterActions>
+                                    <BeginStoryboard Storyboard="{StaticResource Storyboard1}"/>
+                                </Trigger.EnterActions>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="WinButtonTheme" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <ControlTemplate.Resources>
+                            <Storyboard x:Key="Storyboard1">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="grid">
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="1.25"/>
+                                </DoubleAnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="grid">
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="1.25"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="Storyboard_Copy1">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="grid">
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="grid">
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </ControlTemplate.Resources>
+                        <Grid x:Name="grid" RenderTransformOrigin="0.5,0.5">
+                            <Grid.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Grid.RenderTransform>
+                            <Image Source="/NeginProject;component/Images/Windows.png"/>
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Trigger.ExitActions>
+                                    <BeginStoryboard x:Name="Storyboard_Copy1_BeginStoryboard" Storyboard="{StaticResource Storyboard_Copy1}"/>
+                                </Trigger.ExitActions>
+                                <Trigger.EnterActions>
+                                    <BeginStoryboard Storyboard="{StaticResource Storyboard1}"/>
+                                </Trigger.EnterActions>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ThemeButtonTheme" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <ControlTemplate.Resources>
+                            <Storyboard x:Key="Storyboard1">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="grid">
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="1.25"/>
+                                </DoubleAnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="grid">
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="1.25"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="Storyboard_Copy1">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="grid">
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="grid">
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </ControlTemplate.Resources>
+                        <Grid x:Name="grid" RenderTransformOrigin="0.5,0.5">
+                            <Grid.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Grid.RenderTransform>
+                            <Image Source="/NeginProject;component/Images/web.png"/>
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Trigger.ExitActions>
+                                    <BeginStoryboard x:Name="Storyboard_Copy1_BeginStoryboard" Storyboard="{StaticResource Storyboard_Copy1}"/>
+                                </Trigger.ExitActions>
+                                <Trigger.EnterActions>
+                                    <BeginStoryboard Storyboard="{StaticResource Storyboard1}"/>
+                                </Trigger.EnterActions>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.Resources>
+            <x:Array x:Key="presetItemArray"
+                  Type="local:PresetItem">
+                <local:PresetItem Description="Default"
+                              PreferredDataGridBackgroundBrush="{x:Static xcdg:DataGridControlBackgroundBrushes.HorizonOrange}" />
+
+                <local:PresetItem Description="Elevated"
+                              PreferredDataGridBackgroundBrush="{x:Static xcdg:DataGridControlBackgroundBrushes.HorizonBlue}">
+                    <local:PresetItem.ResourceDictionary>
+                        <ResourceDictionary Source="/NeginProject;component/Themes/ElevatedPreset.xaml" />
+                    </local:PresetItem.ResourceDictionary>
+                </local:PresetItem>
+
+                <local:PresetItem Description="Card strip"
+                              PreferredDataGridBackgroundBrush="{x:Static xcdg:DataGridControlBackgroundBrushes.AuroraBlue}">
+                    <local:PresetItem.ResourceDictionary>
+                        <ResourceDictionary Source="/NeginProject;component/Themes/CardStripPreset.xaml" />
+                    </local:PresetItem.ResourceDictionary>
+                </local:PresetItem>
+
+                <local:PresetItem Description="Step up"
+                              PreferredDataGridBackgroundBrush="{x:Static xcdg:DataGridControlBackgroundBrushes.AuroraBlue}">
+                    <local:PresetItem.ResourceDictionary>
+                        <ResourceDictionary Source="/NeginProject;component/Themes/StepUpPreset.xaml" />
+                    </local:PresetItem.ResourceDictionary>
+                </local:PresetItem>
+
+                <local:PresetItem Description="Perspective"
+                              PreferredDataGridBackgroundBrush="{x:Static xcdg:DataGridControlBackgroundBrushes.SunBlue}">
+                    <local:PresetItem.ResourceDictionary>
+                        <ResourceDictionary Source="/NeginProject;component/Themes/PerspectivePreset.xaml" />
+                    </local:PresetItem.ResourceDictionary>
+                </local:PresetItem>
+
+                <local:PresetItem Description="Train"
+                              PreferredDataGridBackgroundBrush="{x:Static xcdg:DataGridControlBackgroundBrushes.NightFog}">
+                    <local:PresetItem.ResourceDictionary>
+                        <ResourceDictionary Source="/NeginProject;component/Themes/TrainPreset.xaml" />
+                    </local:PresetItem.ResourceDictionary>
+                </local:PresetItem>
+
+                <local:PresetItem Description="Heroic"
+                              PreferredDataGridBackgroundBrush="{x:Static xcdg:DataGridControlBackgroundBrushes.Sunrise}">
+                    <local:PresetItem.ResourceDictionary>
+                        <ResourceDictionary Source="/NeginProject;component/Themes/HeroicPreset.xaml" />
+                    </local:PresetItem.ResourceDictionary>
+                </local:PresetItem>
+
+                <local:PresetItem Description="Wings"
+                              PreferredDataGridBackgroundBrush="{x:Static xcdg:DataGridControlBackgroundBrushes.ElementalBlue}">
+                    <local:PresetItem.ResourceDictionary>
+                        <ResourceDictionary Source="/NeginProject;component/Themes/WingsPreset.xaml" />
+                    </local:PresetItem.ResourceDictionary>
+                </local:PresetItem>
+
+                <local:PresetItem Description="Box"
+                              PreferredDataGridBackgroundBrush="{x:Static xcdg:DataGridControlBackgroundBrushes.ElementalSilver}">
+                    <local:PresetItem.ResourceDictionary>
+                        <ResourceDictionary Source="/NeginProject;component/Themes/BoxPreset.xaml" />
+                    </local:PresetItem.ResourceDictionary>
+                </local:PresetItem>
+
+                <local:PresetItem Description="Catwalk"
+                              PreferredDataGridBackgroundBrush="{x:Static xcdg:DataGridControlBackgroundBrushes.AuroraPink}">
+                    <local:PresetItem.ResourceDictionary>
+                        <ResourceDictionary Source="/NeginProject;component/Themes/CatwalkPreset.xaml" />
+                    </local:PresetItem.ResourceDictionary>
+                </local:PresetItem>
+
+                <local:PresetItem Description="Shuffle"
+                              PreferredDataGridBackgroundBrush="{x:Null}">
+                    <local:PresetItem.ResourceDictionary>
+                        <ResourceDictionary Source="/NeginProject;component/Themes/ShufflePreset.xaml" />
+                    </local:PresetItem.ResourceDictionary>
+                </local:PresetItem>
+
+                <local:PresetItem Description="Corner"
+                              PreferredDataGridBackgroundBrush="{x:Static xcdg:DataGridControlBackgroundBrushes.AuroraBlue}">
+                    <local:PresetItem.ResourceDictionary>
+                        <ResourceDictionary Source="/NeginProject;component/Themes/CornerPreset.xaml" />
+                    </local:PresetItem.ResourceDictionary>
+                </local:PresetItem>
+
+                <local:PresetItem Description="Domino"
+                              PreferredDataGridBackgroundBrush="{x:Static xcdg:DataGridControlBackgroundBrushes.Sunrise}">
+                    <local:PresetItem.ResourceDictionary>
+                        <ResourceDictionary Source="/NeginProject;component/Themes/DominoPreset.xaml" />
+                    </local:PresetItem.ResourceDictionary>
+                </local:PresetItem>
+
+                <local:PresetItem Description="Cube"
+                              PreferredDataGridBackgroundBrush="{x:Static xcdg:DataGridControlBackgroundBrushes.SunOrange}">
+                    <local:PresetItem.ResourceDictionary>
+                        <ResourceDictionary Source="/NeginProject;component/Themes/CubePreset.xaml" />
+                    </local:PresetItem.ResourceDictionary>
+                </local:PresetItem>
+
+                <local:PresetItem Description="Black hole"
+                              PreferredDataGridBackgroundBrush="{x:Static xcdg:DataGridControlBackgroundBrushes.SunBlack}">
+                    <local:PresetItem.ResourceDictionary>
+                        <ResourceDictionary Source="/NeginProject;component/Themes/BlackHolePreset.xaml" />
+                    </local:PresetItem.ResourceDictionary>
+                </local:PresetItem>
+            </x:Array>
+
+            <x:Array x:Key="gridBackgroundBrushArray"
+                  Type="coll:DictionaryEntry">
+                <coll:DictionaryEntry Key="Default"
+                                  Value="{x:Null}" />
+                <coll:DictionaryEntry Key="Aurora blue"
+                                  Value="{x:Static xcdg:DataGridControlBackgroundBrushes.AuroraBlue}" />
+                <coll:DictionaryEntry Key="Aurora pink"
+                                  Value="{x:Static xcdg:DataGridControlBackgroundBrushes.AuroraPink}" />
+                <coll:DictionaryEntry Key="Aurora red"
+                                  Value="{x:Static xcdg:DataGridControlBackgroundBrushes.AuroraRed}" />
+                <coll:DictionaryEntry Key="Elemental black"
+                                  Value="{x:Static xcdg:DataGridControlBackgroundBrushes.ElementalBlack}" />
+                <coll:DictionaryEntry Key="Elemental blue"
+                                  Value="{x:Static xcdg:DataGridControlBackgroundBrushes.ElementalBlue}" />
+                <coll:DictionaryEntry Key="Elemental silver"
+                                  Value="{x:Static xcdg:DataGridControlBackgroundBrushes.ElementalSilver}" />
+                <coll:DictionaryEntry Key="Horizon blue"
+                                  Value="{x:Static xcdg:DataGridControlBackgroundBrushes.HorizonBlue}" />
+                <coll:DictionaryEntry Key="Horizon orange"
+                                  Value="{x:Static xcdg:DataGridControlBackgroundBrushes.HorizonOrange}" />
+                <coll:DictionaryEntry Key="Night fog"
+                                  Value="{x:Static xcdg:DataGridControlBackgroundBrushes.NightFog}" />
+                <coll:DictionaryEntry Key="Sunrise"
+                                  Value="{x:Static xcdg:DataGridControlBackgroundBrushes.Sunrise}" />
+                <coll:DictionaryEntry Key="Sunrise blue"
+                                  Value="{x:Static xcdg:DataGridControlBackgroundBrushes.SunriseBlue}" />
+                <coll:DictionaryEntry Key="Sun black"
+                                  Value="{x:Static xcdg:DataGridControlBackgroundBrushes.SunBlack}" />
+                <coll:DictionaryEntry Key="Sun blue"
+                                  Value="{x:Static xcdg:DataGridControlBackgroundBrushes.SunBlue}" />
+                <coll:DictionaryEntry Key="Sun orange"
+                                  Value="{x:Static xcdg:DataGridControlBackgroundBrushes.SunOrange}" />
+            </x:Array>
+
+            <x:Array x:Key="cardBackgroundBrushArray"
+                  Type="coll:DictionaryEntry">
+                <coll:DictionaryEntry Key="Default"
+                                  Value="{x:Null}" />
+
+                <coll:DictionaryEntry Key="Pebbles">
+                    <coll:DictionaryEntry.Value>
+                        <Style TargetType="xcdg:DataRow">
+                            <Setter Property="Background"
+                             Value="{x:Static xcdg:CardBackgroundBrushes.Pebbles}" />
+                        </Style>
+                    </coll:DictionaryEntry.Value>
+                </coll:DictionaryEntry>
+
+                <coll:DictionaryEntry Key="Retro">
+                    <coll:DictionaryEntry.Value>
+                        <Style TargetType="xcdg:DataRow">
+                            <Setter Property="Background"
+                             Value="{x:Static xcdg:CardBackgroundBrushes.Retro}" />
+                        </Style>
+                    </coll:DictionaryEntry.Value>
+                </coll:DictionaryEntry>
+
+                <coll:DictionaryEntry Key="Sunrise">
+                    <coll:DictionaryEntry.Value>
+                        <Style TargetType="xcdg:DataRow">
+                            <Setter Property="Background"
+                             Value="{x:Static xcdg:CardBackgroundBrushes.Sunrise}" />
+                        </Style>
+                    </coll:DictionaryEntry.Value>
+                </coll:DictionaryEntry>
+            </x:Array>
+
+            <DataTemplate x:Key="presetComboBoxItemTemplate"
+                       DataType="local:PresetItem">
+                <TextBlock Text="{Binding Description}"
+                       Margin="2,0,6,0" />
+            </DataTemplate>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="39*" />
+            <RowDefinition Height="447*" />
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Row="1">
+            <xcdg:DataGridControl x:Name="grid" UpdateSourceTrigger="CellEndingEdit" CellEditorDisplayConditions="CellIsCurrent" ItemScrollingBehavior="Immediate" IsDeleteCommandEnabled="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <xcdg:DataGridControl.View>
+                    <xcdg:CardflowView3D UseDefaultHeadersFooters="False">
+                        <xcdg:CardflowView3D.FixedHeaders>
+                            <DataTemplate>
+                                <xcdg:HierarchicalGroupByControl xcdg:TableView.CanScrollHorizontally="False" NoGroupContent="عکسی برای این سند موجود نمی باشد" />
+                            </DataTemplate>
+                            <DataTemplate>
+                                <xcdg:ColumnManagerRow />
+                            </DataTemplate>
+                        </xcdg:CardflowView3D.FixedHeaders>
+                    </xcdg:CardflowView3D>
+                </xcdg:DataGridControl.View>
+            </xcdg:DataGridControl>
+        </DockPanel>
+        <ComboBox x:Name="presetComboBox" Visibility="Hidden" HorizontalAlignment="Left" ItemsSource="{Binding Source={StaticResource presetItemArray}}" Width="5" Margin="206,9,0,27" />
+        <Button Content="افزودن" Style="{DynamicResource AddButtonTheme}" HorizontalAlignment="Right" Margin="0,3,78,2" Name="AddButton" Width="83" Click="AddButton_Click" />
+        <Button HorizontalAlignment="Left" Margin="78,4,0,1" Style="{DynamicResource WinButtonTheme}" Name="ShowInWindowsButton" Width="81" Click="ShowInWindowsButton_Click" />
+        <Button Style="{DynamicResource ThemeButtonTheme}" Height="34" VerticalAlignment="Center" HorizontalAlignment="Center" Name="ChangeThemeButton" Click="ChangeThemeButton_Click" Margin="391,4,209,3" Width="53" />
+        <ComboBox DisplayMemberPath="Key" HorizontalAlignment="Left" ItemsSource="{StaticResource gridBackgroundBrushArray}" Margin="206,18,0,14" Name="GridBackgroundBrush" Height="5" SelectedIndex="0" SelectedValuePath="Value" Width="5" Visibility="Hidden" />
+        <Button VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource BackgroundButtonTheme}" Content="Back" Height="37" Name="BackgroundButton" Width="54" Click="BackgroundButton_Click" Margin="291,2,408,2" />
+    </Grid>
+</Window>
